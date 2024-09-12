@@ -1,0 +1,423 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    margin-bottom: 20px;
+    width:auto
+}
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand img {
+    float: left;
+    margin-right: 10px; /* Adjust the spacing as needed */
+    max-height: 8%;
+    max-width: 8%;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+}
+.navbar-nav .nav-link {
+    color: #fff !important;
+}
+.navbar-nav .nav-link:hover {
+    color: #e67e22 !important;
+}
+.navbar-nav .dropdown-menu {
+    background-color: #333;
+}
+.navbar-nav .dropdown-item {
+    color: #fff;
+}
+.navbar-nav .dropdown-item:hover {
+    background-color: #444;
+}
+.navbar-toggler {
+    border: none;
+}
+/* Style to show active nav item link as hovered */
+.navbar-nav .nav-link.active {
+    background-color: #b1166b;
+    color: white;
+    border-radius: 5px;
+}
+.navbar-nav .nav-link:hover {
+    background-color: #c4bdbb;
+    color: white;
+    border-radius: 5px;
+}
+
+/* welcome page video animation css*/
+/* Video Background */
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Overlay */
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+}
+
+.video-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.video-overlay p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.video-overlay .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    animation: fadeInUp 1s ease-out 0.5s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Hero Section */
+.hero {
+    background: #333 url('path-to-your-animation-image-or-video') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 100px 0; /* Adjusted padding for better spacing */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 2rem;
+}
+.hero-image {
+    background-size: contain;
+    height: 300px;
+  }
+.hero .btn {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.hero .btn:hover {
+    background-color: #d35400;
+    color: #fff;
+}
+.spacer{
+    height: 80px;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 450px;
+}
+
+.card-img-top {
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+    font-size:16px;
+}
+        /* Portfolio Cards Styling */
+        .rotate-card:hover {
+            transform: rotate(5deg);
+            transition: transform 0.3s;
+        }
+
+.btn-warning {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #c20a6f;
+    color: #fff;
+}
+
+/* About Us Section */
+#about {
+    padding: 60px 0;
+}
+#about h2 {
+    font-size: 2rem;
+}
+
+/* Contact Us Section */
+#contact {
+    background-color: #f8f9fa;
+}
+#contact form {
+    max-width: 600px;
+    margin: auto;
+}
+#contact .form-control {
+    border-radius: 0.25rem;
+}
+#contact .btn {
+    background-color: #e67e22;
+    color: #fff;
+}
+#contact .btn:hover {
+    background-color: #d35400;
+}
+
+/* Testimonials section */
+.testimonials {
+    padding: 60px 0;
+  }
+  
+  .testimonials-slider {
+    position: relative;
+  }
+  
+  .testimonials-slider .swiper-pagination {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .testimonials-slider .swiper-pagination-bullet {
+    background-color: #fff;
+    opacity: 0.5;
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+  }
+  
+  .testimonials-slider .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  
+  .testimonial-item {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+  }
+  
+  .testimonial-item p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  
+  .testimonial-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-meta h4 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .testimonial-meta p {
+    font-size: 14px;
+    color: #999;
+  }
+
+/* FAQs Section */
+#faqs .accordion-item {
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    margin-bottom: 10px;
+}
+#faqs .accordion-header {
+    background-color: #f8f9fa;
+}
+#faqs .accordion-button {
+    background-color: #f8f9fa;
+    color: #333;
+}
+#faqs .accordion-button:not(.collapsed) {
+    color: #e67e22;
+    background-color: #e2e6ea;
+}
+#faqs .accordion-body {
+    background-color: #fff;
+}
+
+
+/* Let's Talk Dropdown Styles */
+.phone-link {
+    color: #fff;
+    background-color: #28a745; /* Matches WhatsApp green */
+}
+
+.phone-link:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.whatsapp-link {
+    color: #fff;
+    background-color: #25D366; /* WhatsApp color */
+}
+
+.whatsapp-link:hover {
+    background-color: #1EBE53; /* Darker WhatsApp color on hover */
+}
+
+.email-link {
+    color: #fff;
+    background-color: #D44638; /* Gmail red */
+}
+
+.email-link:hover {
+    background-color: #B33627; /* Darker Gmail red on hover */
+}
+
+
+        /* Custom Styles for Cart Page */
+        #cart {
+            padding: 2rem;
+            background-color: #f9f9f9;
+        }
+
+        #cart h2 {
+            font-weight: bold;
+        }
+
+        .table thead {
+            background-color: #343a40;
+        }
+
+        .table td, .table th {
+            vertical-align: middle;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+        }
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+footer .social-icons a:hover {
+    color: #e67e22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+}

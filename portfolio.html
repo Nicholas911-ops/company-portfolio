@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migua Lights & Electricals - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" alt="Migua Lights & Electricals Logo">
+                    <h4> Migua Lights & Electricals </h4>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars text-white"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadContent('home')">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadContent('about')">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadContent('testimonials')">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadContent('faqs')">FAQs</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                            <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+                                <li><a class="dropdown-item" href="#" onclick="loadContent('lighting-accessories')">Lighting Accessories (Bulbs)</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="loadContent('meter-boxes')">Meter Boxes</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="loadContent('sockets-switches')">Sockets & Switches</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="letsTalkDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Customer Support</a>
+                            <ul class="dropdown-menu" aria-labelledby="letsTalkDropdown">
+                                <li><a class="dropdown-item phone-link" href="tel:+254113393877">Call Us</a></li>
+                                <li><a class="dropdown-item whatsapp-link" href="https://wa.me/+254113393877" target="_blank">WhatsApp</a></li>
+                                <li><a class="dropdown-item email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=homelightkeltd@gmail.com" target="_blank">Email Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#" onclick="loadContent('cart')">Cart</a></li>
+                        <li class="nav-item">
+                            <a class="btn btn-warning text-dark ms-2" href="#quote">Quote</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Dynamic Content Container -->
+    <main class="container my-5" id="contentContainer">
+        <!-- Initial Content Loaded -->
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="videos/background_anime.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+                <h1>Light Up Your World</h1>
+                <p>Explore the best lighting and electrical solutions.</p>
+                <a href="#catalog" class="btn btn-warning text-dark btn-lg">Get Started</a>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="#home" class="text-white">Home</a> 
+                <a href="#about" class="text-white">About Us</a> 
+                <a href="#contact" class="text-white">Contact Us</a> 
+                <a href="#faqs" class="text-white">FAQs</a> 
+                <a href="#portfolio" class="text-white">Portfolio</a>
+            </div>
+            <div class="mb-3">
+                <a href="https://www.facebook.com" class="text-white me-3" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://tiktok.com" class="text-white me-3" aria-label="Twitter">
+                    <i class="fab fa-tiktok"></i> TikTok
+                </a>
+                <a href="https://www.instagram.com" class="text-white" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+            </div>
+            <p>&copy; 2024 Migua Lights & Electricals. All rights reserved. (Courtesy work of <a href="http://">Nicholas_KE</a>)</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".testimonials-slider", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        
+
+        function loadContent(page) {
+            let content = '';
+
+            switch(page) {
+                case 'home':
+                    content = `
+                        <!-- Hero Section -->
+                        <section class="hero bg-dark text-white text-center py-5" style="background-image: url('images/migua.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+
+                            <div class="container">  <h4 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Lighting Up Your Future.Lighting Up Your Home, One Bulb at a Time.</h4>
+                                <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">From Bulbs to Boards, We've Got You Covered.Your Trusted Source for Light and Electricals.</p>
+                                <a href="#portfolio" class="btn btn-warning text-dark btn-lg animate__animated animate__fadeInUp animate__delay-2s">Explore Our Catalogue</a>
+                            </div>
+                            </div>
+
+                                <!-- Product Catalog Cards -->
+                                <div class="row mt-5">
+                                    <!-- Cooker Sockets Card -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card bg-light text-dark border-0 rotate-card">
+                                            <img src="images/cooker_socket.jpeg" class="card-img-top" alt="Cooker Sockets">
+                                            <div class="card-body text-center">
+                                                <h4 class="card-title">Cooker Sockets</h4>
+                                                <p class="card-text">High-quality cooker sockets for your kitchen.</p>
+                                                <a href="#cooker-sockets" class="btn btn-warning text-dark">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Full Moonlights Card -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card bg-light text-dark border-0 rotate-card">
+                                            <img src="images/fullmoonlights.jpg" class="card-img-top" alt="Full Moonlights">
+                                            <div class="card-body text-center">
+                                                <h4 class="card-title">Full Moonlights</h4>
+                                                <p class="card-text">Illuminate your space with our full moonlights.</p>
+                                                <a href="#full-moonlights" class="btn btn-warning text-dark">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Wall Bracket Card -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card bg-light text-dark border-0 rotate-card">
+                                            <img src="images/wallbracket.jpg" class="card-img-top" alt="Wall Bracket">
+                                            <div class="card-body text-center">
+                                                <h4 class="card-title">Wall Bracket</h4>
+                                                <p class="card-text">Durable wall brackets for your home or office.</p>
+                                                <a href="#wall-bracket" class="btn btn-warning text-dark">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Change-over Switch Card -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card bg-light text-dark border-0 rotate-card">
+                                            <img src="images/changeoverswitch.jpg" class="card-img-top" alt="Change-over Switch">
+                                            <div class="card-body text-center">
+                                                <h4 class="card-title">Change-over Switch</h4>
+                                                <p class="card-text">Reliable change-over switches for power management.</p>
+                                                <a href="#change-over-switch" class="btn btn-warning text-dark">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Earthrods Card -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card bg-light text-dark border-0 rotate-card">
+                                            <img src="images/earthrods.jpg" class="card-img-top" alt="Earthrods">
+                                            <div class="card-body text-center">
+                                                <h4 class="card-title">Earthrods</h4>
+                                                <p class="card-text">High-quality earthrods for grounding systems.</p>
+                                                <a href="#earthrods" class="btn btn-warning text-dark">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- floodlights Product Card -->
+                                    <div class="col-md-4 mb-4">
+                                        <div class="card bg-light text-dark border-0 rotate-card">
+                                            <img src="images/floodlights.jpg" class="card-img-top" alt="Product 6">
+                                            <div class="card-body text-center">
+                                                <h4 class="card-title">Floodlights</h4>
+                                                <p class="card-text">Powerful outdoor lighting for any occasion.</p>
+                                                <a href="#floodlights" class="btn btn-warning text-dark">View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </section>
+                    `;
+                    break;
+                    
+                case 'about':
+                    content = `
+                        <!-- About Us Section -->
+                        <section id="about" class="py-5">
+                            <div class="container text-center">
+                                <h2>About Us</h2>
+                                <p>We provide top-quality lighting and electrical solutions to illuminate your spaces. Our products are designed to meet the highest standards of safety and efficiency.</p>
+                            </div>
+                        </section>
+                    `;
+                    break;
+                case 'testimonials':
+                    content = `
+                        <!-- Testimonials Section -->
+                        <section id="testimonials" class="testimonials">
+                            <div class="container">
+                                <div class="section-title">
+                                    <h2>What Our Clients Say</h2>
+                                    <p>Hear from our satisfied customers about their experiences with our services.</p>
+                                </div>
+                                <div class="testimonials-slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                <div class="testimonial-meta">
+                                                    <img src="img/testimonial-1.jpg" alt="Testimonial 1">
+                                                    <h4>Sarah Wilson</h4>
+                                                    <p>CEO, Company Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                <div class="testimonial-meta">
+                                                    <img src="img/testimonial-2.jpg" alt="Testimonial 2">
+                                                    <h4>John Doe</h4>
+                                                    <p>Marketing Manager, Company Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                <div class="testimonial-meta">
+                                                    <img src="img/testimonial-3.jpg" alt="Testimonial 3">
+                                                    <h4>Jane Smith</h4>
+                                                    <p>Customer Service Representative, Company Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-item">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                <div class="testimonial-meta">
+                                                    <img src="img/testimonial-4.jpg" alt="Testimonial 4">
+                                                    <h4>Michael Johnson</h4>
+                                                    <p>Freelancer, Company Name</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </section>
+                    `;
+                    break;
+                case 'faqs':
+                    content = `
+                        <!-- FAQs Section -->
+                        <section id="faqs" class="py-5">
+                            <div class="container">
+                                <h2 class="text-center">FAQs</h2>
+                                <div class="accordion" id="faqsAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Question 1
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqsAccordion">
+                                            <div class="accordion-body">
+                                                Answer to question 1.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Question 2
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqsAccordion">
+                                            <div class="accordion-body">
+                                                Answer to question 2.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                Question 3
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqsAccordion">
+                                            <div class="accordion-body">
+                                                Answer to question 3.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    `;
+                    break;
+
+                    case 'lighting-accessories':
+        content = `
+            <!-- Portfolio - Lighting Accessories -->
+            <main id="portfolio">
+                <div class="container my-5">
+                    <h2 class="text-center mb-4" style="color: #e67e22;">Lighting Accessories (Bulbs)</h2>
+                    <p class="text-center mb-5">Explore our range of bulbs and lighting accessories.</p>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/fullmoonlights.jpg" class="card-img-top" alt="Light 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Full Moon Lights</h5>
+                                    <p class="card-text">Energy-efficient LED bulbs for modern homes.</p>
+                                    <button class="btn btn-warning text-dark add-to-cart-btn" data-name="Full Moon Lights" data-description="Energy-efficient LED bulbs for modern homes.">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/floodlights.jpg" class="card-img-top" alt="Light 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Floodlights</h5>
+                                    <p class="card-text">Classic design for a vast and secure street lighting at bothe personal or commercial grounds.</p>
+                                    <button class="btn btn-warning text-dark add-to-cart-btn" data-name="Floodlights" data-description="Classic design for a vast and secure street lighting at bothe personal or commercial grounds.">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/antiqueerichsonbulb.jpg" class="card-img-top" alt="Light 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Smart Bulb</h5>
+                                    <p class="card-text">Control your lighting with just a tap and different colors of interest light your favourite places</p>
+                                    <button class="btn btn-warning text-dark add-to-cart-btn" data-name="Smart Bulb" data-description="Control your lighting with just a tap.">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        `;
+        break;
+    case 'meter-boxes':
+        content = `
+            <!-- Portfolio - Meter Boxes -->
+            <main id="portfolio">
+                <div class="container my-5">
+                    <h2 class="text-center mb-4" style="color: #e67e22;">Meter Boxes(Enclosed/Unenclosed)</h2>
+                    <p class="text-center mb-5">Explore our range of Meter Boxes.</p>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/fullmoonlights.jpg" class="card-img-top" alt="Light 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Modern LED Bulb</h5>
+                                    <p class="card-text">Energy-efficient full Moon lights for modern homes.</p>
+                                    <button class="btn btn-warning text-dark add-to-cart-btn" data-name="Modern LED Bulb" data-description="Energy-efficient full Moon lights for modern homes.">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/floodlights.jpg" class="card-img-top" alt="Light 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Vintage Lamp</h5>
+                                    <p class="card-text">Classic Floodlights for a timeless look.</p>
+                                    <button class="btn btn-warning text-dark add-to-cart-btn" data-name="Vintage Lamp" data-description="Classic Floodlights for a timeless look.">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/antiqueerichsonbulb.jpg" class="card-img-top" alt="Light 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Smart Bulb</h5>
+                                    <p class="card-text">Control your lighting with just a tap.</p>
+                                    <button class="btn btn-warning text-dark add-to-cart-btn" data-name="Smart Bulb" data-description="Control your lighting with just a tap.">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        `;
+        break;
+    case 'sockets-switches':
+        content = `
+            <!-- Portfolio - Sockets & Switches -->
+              <main id="portfolio">
+                <div class="container my-5">
+                    <h2 class="text-center mb-4" style="color: #e67e22;">Lighting Accessories (Bulbs)</h2>
+                    <p class="text-center mb-5">Durable sockets and switches to power your home.</p>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/cooker.jpg" class="card-img-top" alt="Light 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cooker Socket</h5>
+                                    <p class="card-text">Energy-efficient and adaptive switches for cooker appliances.</p>
+                                    <button class="btn btn-warning text-dark add-to-cart-btn" data-name="Cooker Socket" data-description="Energy-efficient and adaptive switches for cooker appliances.">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/changeoverswitch.jpg" class="card-img-top" alt="Light 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Change-over Switch</h5>
+                                    <p class="card-text">Classic changeover switch for a timeless look.</p>
+                                    <button class="btn btn-warning text-dark add-to-cart-btn" data-name="Change-over Switch" data-description="Classic changeover switch for a timeless look.">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <img src="images/twinsockets.jpg" class="card-img-top" alt="Light 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Twin Sockets</h5>
+                                    <p class="card-text">Powerful and efficient twin sockets for multi-power appliances providence.</p>
+                                    <button class="btn btn-warning text-dark add-to-cart-btn" data-name="Twin Sockets" data-description="Powerful and efficient twin sockets for multi-power appliances providence.">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        `;
+        break;
+    case 'cart':
+        content = `
+            <!-- Cart Page -->
+            <main id="cart" class="container my-5">
+                <h2 class="text-center mb-4" style="color: #e67e22;">Your Quoted Items</h2>
+                <p class="text-center mb-5">Please confirm the items in your cart before submission. If everything is correct, let's get working for you, our esteemed customer.</p>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="bg-dark text-white">
+                            <tr>
+                                <th scope="col">S.no</th>
+                                <th scope="col">Item</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Quantity</th>                        
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items">
+                            <!-- Items will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-success text-white me-2" onclick="submitCartViaWhatsApp()">Submit via WhatsApp</button>
+                    <button class="btn btn-info text-white" onclick="downloadCartAsPDF()">Download as PDF</button>
+                </div>
+            </main>
+        `;
+        break;
+    
+             default:
+                    content = `<h2>Welcome to Migua Lights & Electricals</h2><p>Your trusted source for light and electricals. Explore our wide range of products and services.</p>`;
+            }
+            
+ // Update the innerHTML of contentContainer
+document.getElementById('contentContainer').innerHTML = content;
+
+// Function to add event listeners to 'Add to Cart' buttons
+function addCartButtonListeners() {
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const name = this.getAttribute('data-name');
+            const description = this.getAttribute('data-description');
+            addToCart(name, description);
+        });
+    });
+}
+
+// Initialize an empty array to hold cart items
+let cart = [];
+
+// Function to render cart items in the table
+function renderCart() {
+    let cartItemsContainer = document.getElementById('cart-items');
+    cartItemsContainer.innerHTML = ''; // Clear previous content
+
+    cart.forEach((item, index) => {
+        let row = `
+            <tr>
+                <td>${index + 1}</td>
+                <td>${item.name}</td>
+                <td>${item.description}</td>
+                <td>${item.quantity}</td>
+                <td>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">Remove</button>
+                </td>
+            </tr>
+        `;
+        cartItemsContainer.insertAdjacentHTML('beforeend', row);
+    });
+}
+
+// Function to add an item to the cart
+function addToCart(name, description) {
+    // Check if item already exists in the cart
+    let existingItem = cart.find(item => item.name === name);
+    if (existingItem) {
+        existingItem.quantity += 1; // Increment quantity if item already exists
+    } else {
+        cart.push({ name, description, quantity: 1 }); // Add new item to cart
+    }
+    renderCart(); // Re-render the cart
+}
+
+// Function to remove an item from the cart
+function removeFromCart(index) {
+    cart.splice(index, 1); // Remove item by index
+    renderCart(); // Re-render the cart
+}
+
+// Function to submit cart via WhatsApp
+function submitCartViaWhatsApp() {
+    let message = 'Hello, I would like to order the following items:\n\n';
+    cart.forEach((item, index) => {
+        message += `${index + 1}. ${item.name} - ${item.description} (Quantity: ${item.quantity})\n`;
+    });
+
+    let whatsappUrl = `https://wa.me/254113363425?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+}
+
+// Function to download cart as PDF
+function downloadCartAsPDF() {
+    // You can use a library like jsPDF to generate and download a PDF
+    let doc = new jsPDF();
+    doc.text('Your Quoted Items', 10, 10);
+
+    cart.forEach((item, index) => {
+        doc.text(`${index + 1}. ${item.name} - ${item.description} (Quantity: ${item.quantity})`, 10, 20 + (index * 10));
+    });
+
+    doc.save('cart.pdf');
+}
+
+
+// Add event listeners to all 'Add to Cart' buttons after the content is loaded
+addCartButtonListeners();
+
+ }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            // Remove active class from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Add active class to the clicked link
+            this.classList.add('active');
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
