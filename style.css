@@ -425,12 +425,8 @@ footer .social-icons a:hover {
     }
 }
 @media (max-width: 768px) {
-    .card-container {
-        width: 50%;
-        margin: 0 1rem;
-      }
     .card {
-      /*width: 100%; /* Make cards full width on smaller screens */
+      width: 100%; /* Make cards full width on smaller screens */
       padding: 1rem;
     }
     .card-img-top {
