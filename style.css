@@ -55,6 +55,7 @@ header {
 
 /* welcome page video animation css*/
 /* Video Background */
+/* Video Background */
 .video-background {
     position: relative;
     width: 100%;
@@ -84,24 +85,33 @@ header {
     padding: 20px;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     border-radius: 10px;
+    width: 80%; /* Adjust width for mobile */
+    max-width: 400px; /* Set a maximum width */
 }
 
 .video-overlay h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-    animation: fadeInDown 1s ease-out;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .video-overlay p {
     font-size: 1.25rem;
     margin-bottom: 20px;
-    animation: fadeInUp 1s ease-out;
 }
 
 .video-overlay .btn {
     padding: 10px 20px;
     font-size: 1rem;
-    animation: fadeInUp 1s ease-out 0.5s;
+}
+
+@media (max-width: 768px) {
+    .video-overlay h1 {
+        font-size: 1.5rem;
+    }
+
+    .video-overlay p {
+        font-size: 1rem;
+    }
 }
 
 @keyframes fadeInDown {
