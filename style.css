@@ -421,3 +421,15 @@ footer .social-icons a:hover {
         font-size: 1.2rem;
     }
 }
+@media (max-width: 768px) {
+    .card {
+      width: 100%; /* Make cards full width on smaller screens */
+      padding: 1rem;
+    }
+    .card-img-top {
+      height: 150px; /* Adjust image height for smaller screens */
+    }
+    .card-text {
+      font-size: 0.8rem; /* Reduce font size for better readability */
+    }
+  }
