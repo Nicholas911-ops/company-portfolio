@@ -11,6 +11,26 @@ header {
     width:auto
 }
 
+/* Default for larger screens */
+.page-title {
+    font-size: 2.5rem; /* Default font size */
+}
+
+/* For smaller screens (e.g., max-width: 768px) */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* For even smaller screens (e.g., max-width: 576px) */
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 1.5rem; /* Further adjustment for very small screens */
+    }
+}
+
+
 /* Responsive behavior for smaller screens */
 @media (max-width: 768px) {
     .navbar-brand {
@@ -23,6 +43,9 @@ header {
     }
     
     /* Optional: Slightly reduce the spacing around the toggler on small screens */
+    .navbar-toggler {
+        margin-left: 10px;
+    }
     .navbar-toggler {
         margin-left: 10px;
     }
