@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Handle clicks on dropdown items for the Portfolio dropdown
-    document.querySelectorAll("#portfolioDropdown .dropdown-item").forEach(item => {
+    document.querySelectorAll(".dropdown-item").forEach(item => {
         item.addEventListener("click", function(event) {
             event.preventDefault();  // Prevent the default anchor behavior
 
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Handle clicks on dropdown items for the Customer Support dropdown
-    document.querySelectorAll("#letsTalkDropdown .dropdown-item").forEach(item => {
+    document.querySelectorAll(".dropdown-item").forEach(item => {
         // No need to prevent default for links like phone, WhatsApp, and email
         // These should open external applications or services as usual
         item.addEventListener("click", function(event) {

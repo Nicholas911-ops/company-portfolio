@@ -446,10 +446,12 @@ footer .social-icons a:hover {
         font-size: 1.2rem;
     }
 }
+/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     .card {
       width: 100%; /* Make cards full width on smaller screens */
       padding: 1rem;
+      margin: 0 auto; /* Center cards in the container */
     }
     .card-img-top {
       height: 150px; /* Adjust image height for smaller screens */
@@ -458,4 +460,3 @@ footer .social-icons a:hover {
       font-size: 0.8rem; /* Reduce font size for better readability */
     }
   }
-  
