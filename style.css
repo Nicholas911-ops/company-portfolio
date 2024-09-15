@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Clean and modern font */
     line-height: 1.6;
 }
 
@@ -10,6 +10,29 @@ header {
     margin-bottom: 20px;
     width:auto
 }
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.25rem; /* Reduce font size on smaller screens to fit better */
+    }
+    
+    /* Adjust padding for smaller screens */
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+    
+    /* Optional: Slightly reduce the spacing around the toggler on small screens */
+    .navbar-toggler {
+        margin-left: 10px;
+    }
+}
+
+/* Optional: Styling for the toggler */
+.navbar-toggler {
+    border: none; /* Remove border for a cleaner look */
+}
+
 .navbar {
     padding: 1rem 0;
 }
