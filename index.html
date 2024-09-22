@@ -36,9 +36,12 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
                             <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+                                <li><a class="dropdown-item" href="#" data-page="cables">Cables</a></li> 
                                 <li><a class="dropdown-item" href="#" data-page="lighting-accessories">Lighting Accessories (Bulbs)</a></li>
                                 <li><a class="dropdown-item" href="#" data-page="meter-boxes">Meter Boxes/Other Fabrications</a></li>
+                                <li><a class="dropdown-item" href="#" data-page="conduit-and-fittings">Conduit & Fittings</a></li>
                                 <li><a class="dropdown-item" href="#" data-page="sockets-switches">Sockets & Switches</a></li>
+                                <li><a class="dropdown-item" href="#" data-page="padlocks">Padlocks</a></li>
                             </ul>
                         </li>                        
                         <li class="nav-item dropdown">
@@ -161,42 +164,128 @@
                 </div>
             </section>
 
-            <!--about section-->
-            <section id="about-section" class="py-5 bg-light" style="display: none;">
-                <div class="container text-center">
-                    <!-- Introductory Paragraph -->
-                    <div class="mb-4 mt-2">
-                        <h2 class="display-4 fw-bold">About Migua Lighting & Electricals</h2>
-                        <p class="lead">At Migua Lighting & Electricals, we are dedicated to providing top-quality lighting and electrical solutions to illuminate your spaces. Our wide range of products is designed to meet the highest standards of safety, efficiency, and aesthetic appeal.</p>
+ <!-- About Section -->
+<section id="about-section" class="py-5 bg-light" style="display: none;">
+    <div class="container text-center">
+        <!-- Introductory Paragraph -->
+        <div class="mb-4 mt-2">
+            <h2 class="display-4 fw-bold">About Migua Lighting & Electricals</h2>
+            <p class="lead">At Migua Lighting & Electricals, we are dedicated to providing top-quality lighting and electrical solutions to illuminate your spaces. Our wide range of products is designed to meet the highest standards of safety, efficiency, and aesthetic appeal.</p>
+        </div>
+
+            <!-- Landmark Image with Inline CSS -->
+            <div class="mb-4 mt-2">
+                <img src="images/migua.jpg" alt="Landmark Image" class="img-fluid rounded" style="height: 400px; object-fit: cover;">
+            </div>
+
+
+        <!-- Mission, Vision, and Goals Section -->
+        <div class="row my-5">
+            <!-- Mission -->
+            <div class="col-md-4">
+                <div class="card shadow-lg h-100 mission-card">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary fw-bold">Our Mission</h4>
+                        <p class="card-text">To  deliver exceptional solutions by leveraging advanced technologies, skilled craftmanship and commitment to customer satisfaction.</p>
                     </div>
-            
-                    <!-- Landmark Image -->
-                    <div class="mb-4 mt-2">
-                        <img src="images/landmark.jpg" alt="Landmark Image" class="img-fluid rounded">
+                </div>
+            </div>
+
+            <!-- Vision -->
+            <div class="col-md-4">
+                <div class="card shadow-lg h-100 vision-card">
+                    <div class="card-body">
+                        <h4 class="card-title text-success fw-bold">Our Vision</h4>
+                        <p class="card-text">To be leading provider of innovative and sustainable electrical solutions in Kenya , driving growth and efficiency through superior products and services.</p>
                     </div>
-            
-                    <!-- Map and Location Description -->
-                    <div class="mb-4 mt-2">
-                        <h3>Find Us</h3>
-                        <p>Our store is located along the Eastern Bypass in Utawala, Nairobi. We are easily accessible and offer top-quality lighting and electrical solutions. Visit us for all your needs, and our friendly staff will assist you!</p>
-                        
-                        <!-- Updated Google Map for Utawala -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8208250239672!2d36.95975947431379!3d-1.2812254356192334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f6caf2ae0286f%3A0x5c55804b49df72bf!2sMigua%20Light%20%26%20Electricals!5e0!3m2!1sen!2ske!4v1726393211370!5m2!1sen!2ske" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
-                    <!-- Contact and Social Media Icons -->
-                    <div class="mb-4 mt-3">
-                        <h3>Contact Us</h3>
-                        <p>For inquiries or support, reach out to us through the following channels:</p>
-                        <div class="d-flex flex-wrap justify-content-center mb-3">
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=homelightkeltd@gmail.com" class="btn btn-outline-primary mx-2 mb-2"><i class="bi bi-envelope"></i> Email</a>
-                            <a href="tel:+254113393877" class="btn btn-outline-success mx-2 mb-2"><i class="bi bi-phone"></i> Call</a>
-                            <a href="https://www.facebook.com/profile.php?id=100086798567848&mibextid=ZbWKwL" class="btn btn-outline-primary mx-2 mb-2"><i class="bi bi-facebook"></i> Facebook</a>
-                            <a href="https://www.instagram.com/migualightelectricals?igsh=YzljYTk1ODg3Zg==" class="btn btn-outline-danger mx-2 mb-2"><i class="bi bi-instagram"></i> Instagram</a>
-                            <a href="https://www.tiktok.com/@migualightsltd?_t=8pgXT6IMGko&_r=1" class="btn btn-outline-info mx-2 mb-2"><i class="bi bi-twitter"></i> TikTok</a>
+                </div>
+            </div>
+
+            <!-- Goals -->
+            <div class="col-md-4">
+                <div class="card shadow-lg h-100 goals-card">
+                    <div class="card-body">
+                        <h4 class="card-title text-danger fw-bold">Our Goal</h4>
+                        <p class="card-text">To be the leading provider of electrical solutions that not only meet but exceed the expectations of customers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Values Section -->
+        <div class="my-5">
+            <h3 class="fw-bold">Our Core Values</h3>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+                <span class="badge bg-primary p-3">Quality</span>
+                <span class="badge bg-warning text-dark p-3">Innovation</span>
+                <span class="badge bg-info text-dark p-3">Integrity</span>
+                <span class="badge bg-success p-3">Customer Focus</span>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="my-5">
+            <h3 class="fw-bold">Our Services</h3>
+            <div class="row">
+                <!-- Electrical Products -->
+                <div class="col-md-4">
+                    <div class="card shadow-lg h-100 service-card">
+                        <img src="images/recesspanel.jpg" alt="Electrical Products" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Electrical Products</h5>
+                            <p class="card-text">We offer a comprehensive range of electrical products designed to meet both residential and commercial needs. i.e switches , sockets , circuit breakers , high quality cables , electrical pipes , fittings .</p>
                         </div>
                     </div>
                 </div>
-            </section>
+
+                <!-- Solar Lighting Solutions -->
+                <div class="col-md-4">
+                    <div class="card shadow-lg h-100 service-card">
+                        <img src="images/floodlights.jpg" alt="Solar Lighting" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Solar Lighting Solutions</h5>
+                            <p class="card-text">Sustainable and energy-efficient solar lighting solutions i.e solar panels to brighten up your resdential , commercial and industrial spaces while saving on costs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Powder Coating Services -->
+                <div class="col-md-4">
+                    <div class="card shadow-lg h-100 service-card">
+                        <img src="images/powdercoating.jpg" alt="Powder Coating" class="card-img-top img-fluid">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">Powder Coating Services</h5>
+                            <p class="card-text">We provide high-quality professional powder coating services to give your products a durable and aesthetically pleasing finish , custom color matching to meet specific client requirements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map and Location Description -->
+        <div class="mb-4 mt-2">
+            <h3>Find Us</h3>
+            <p>Our store is located along the Eastern Bypass in Utawala, Nairobi. We are easily accessible and offer top-quality lighting and electrical solutions. Visit us for all your needs, and our friendly staff will assist you!</p>
+
+            <!-- Updated Google Map for Utawala -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8208250239672!2d36.95975947431379!3d-1.2812254356192334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f6caf2ae0286f%3A0x5c55804b49df72bf!2sMigua%20Light%20%26%20Electricals!5e0!3m2!1sen!2ske!4v1726393211370!5m2!1sen!2ske" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <!-- Contact and Social Media Icons -->
+            <div class="mb-4 mt-3">
+                <h3>Contact Us</h3>
+                <p>For inquiries or support, reach out to us through the following channels:</p>
+                <div class="d-flex flex-wrap justify-content-center mb-3">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=homelightkeltd@gmail.com" class="btn btn-outline-primary mx-2 mb-2"><i class="bi bi-envelope"></i> Email</a>
+                    <a href="tel:+254113393877" class="btn btn-outline-success mx-2 mb-2"><i class="bi bi-phone"></i> Call</a>
+                    <a href="https://www.facebook.com/profile.php?id=100086798567848&mibextid=ZbWKwL" class="btn btn-outline-primary mx-2 mb-2"><i class="bi bi-facebook"></i> Facebook</a>
+                    <a href="https://www.instagram.com/migualightelectricals?igsh=YzljYTk1ODg3Zg==" class="btn btn-outline-danger mx-2 mb-2"><i class="bi bi-instagram"></i> Instagram</a>
+                    <a href="https://www.tiktok.com/@migualightsltd?_t=8pgXT6IMGko&_r=1" class="btn btn-outline-info mx-2 mb-2"><i class="bi bi-twitter"></i> TikTok</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
             
 
             <!-- Testimonials Section -->
@@ -424,6 +513,124 @@
                     </div>
                 </div>
             </section>
+
+            <!--portfolio Cables Section -->
+<section id="cables-section" class="py-5 bg-light" style="display: none;">
+    <div class="container text-center">
+        <h2 class="display-4 fw-bold mb-4">Cables</h2>
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cable1.jpg" alt="Cable Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Electrical Cable A</h5>
+                        <p class="card-text">High-quality electrical cable suitable for various wiring installations.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cable2.jpg" alt="Cable Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Electrical Cable B</h5>
+                        <p class="card-text">Durable and fire-resistant cable designed for safety and performance.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/cable3.jpg" alt="Cable Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Electrical Cable C</h5>
+                        <p class="card-text">Flexible and easy-to-install cable, ideal for residential and commercial use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--portfolio Conduit and Fittings Section -->
+<section id="conduit-and-fittings-section" class="py-5 bg-light" style="display: none;">
+    <div class="container text-center">
+        <h2 class="display-4 fw-bold mb-4">Conduit & Fittings</h2>
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/conduit1.jpg" alt="Conduit Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Conduit Pipe</h5>
+                        <p class="card-text">Strong and durable conduit pipe for wiring protection.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/fitting1.jpg" alt="Fitting Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Conduit Fitting A</h5>
+                        <p class="card-text">Top-quality fitting for secure and efficient electrical connections.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/fitting2.jpg" alt="Fitting Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Conduit Fitting B</h5>
+                        <p class="card-text">Premium fitting designed for safe and long-lasting installations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--portfolio Padlocks Section -->
+<section id="padlocks-section" class="py-5 bg-light" style="display: none;">
+    <div class="container text-center">
+        <h2 class="display-4 fw-bold mb-4">Padlocks</h2>
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/padlock1.jpg" alt="Padlock Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Heavy Duty Padlock A</h5>
+                        <p class="card-text">Durable and secure padlock for maximum protection.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/padlock2.jpg" alt="Padlock Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Standard Padlock B</h5>
+                        <p class="card-text">Affordable padlock offering reliable security for homes and offices.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="images/padlock3.jpg" alt="Padlock Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Waterproof Padlock C</h5>
+                        <p class="card-text">Weather-resistant padlock perfect for outdoor use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
                         <!-- Cart Page -->
                         <section id="cart-section" class="container my-5" style="display: none;">

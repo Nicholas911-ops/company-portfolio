@@ -28,9 +28,19 @@ document.addEventListener("DOMContentLoaded", function() {
             case 'cart':
                 content = 'cart-section';
                 break;
+            case 'cables':
+                content = 'cables-section'; // Added cables section
+                break;
+            case 'conduit-and-fittings':
+                content = 'conduit-and-fittings-section'; // Added conduit and fittings section
+                break;
+            case 'padlocks':
+                content = 'padlocks-section'; // Added padlocks section
+                break;
             default:
                 content = 'home-section';  // Default to home section if no match
         }
+        
 
         // Clear the content container
         const container = document.getElementById("contentContainer");
