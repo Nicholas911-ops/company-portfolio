@@ -25,9 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
             case 'sockets-switches':
                 content = 'sockets-switches-section';
                 break;
-            case 'cart':
-                content = 'cart-section';
-                break;
             case 'cables':
                 content = 'cables-section'; // Added cables section
                 break;
