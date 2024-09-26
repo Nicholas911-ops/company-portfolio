@@ -205,50 +205,29 @@ window.onload = function() {
 
 // Example data for Conduit & Fittings subcategories
 const conduitSubcategoryProducts = {
-    'with-bg': [
+    'View-More': [
         {
-            name: '20mm Conduit Everest with BG',
-            description: 'A 20mm conduit pipe with BG, providing superior strength and electrical insulation, ideal for long-lasting installations.',
+            name: '20mm Conduit Everest ',
+            description: 'A 20mm conduit pipe , providing superior strength and electrical insulation, ideal for long-lasting installations.',
             image: 'images/20mm Conduit Everest.jpg',
         },
         {
-            name: '25mm Conduit Everest with BG',
-            description: 'A durable 25mm BG conduit for enhanced protection and easy installation in commercial or residential buildings.',
+            name: '25mm Conduit Everest ',
+            description: 'A durable 25mm  conduit for enhanced protection and easy installation in commercial or residential buildings.',
             image: 'images/25 mm Conduit Everest.jpg',
         },
         {
-            name: '32mm Conduit Everest with BG',
-            description: '32mm conduit with BG for secure and robust wiring systems, ensuring seamless and protective connections.',
+            name: '32mm Conduit Everest ',
+            description: '32mm conduit  for secure and robust wiring systems, ensuring seamless and protective connections.',
             image: 'images/32 Conduit Everest.jpg',
         },
         {
-            name: '50mm Conduit Everest with BG',
-            description: 'A heavy-duty 50mm BG conduit for large-scale installations, designed for smooth and efficient directional conduit setups.',
+            name: '50mm Conduit Everest ',
+            description: 'A heavy-duty 50mm conduit for large-scale installations, designed for smooth and efficient directional conduit setups.',
             image: 'images/50mm Conduit Everest.jpg',
         }
     ],
-    'without-bg': [
-        {
-            name: '20mm Conduit Everest',
-            description: 'A standard 20mm conduit pipe without BG, suitable for basic wiring installations in small to medium projects.',
-            image: 'images/20mm CE(without BG).jpg',
-        },
-        {
-            name: '25mm Conduit Everest',
-            description: 'A 25mm conduit pipe without BG, providing a cost-effective solution for standard electrical protection.',
-            image: 'images/25 mm CE (Without BG).jpg',
-        },
-        {
-            name: '32mm Conduit Everest',
-            description: '32mm conduit without BG, offering reliable protection for wiring in basic installations where heavy-duty protection is not required.',
-            image: 'images/32 mm CE (Without BG).jpg',
-        },
-        {
-            name: '50mm Conduit Everest',
-            description: '50mm conduit without BG, ideal for standard electrical installations, ensuring reliable wiring connections without extra reinforcement.',
-            image: 'images/50 mm CE(Without BG).jpg',
-        }
-    ]
+
 };
 
 // Function to display products based on selected conduit subcategory
@@ -282,7 +261,7 @@ function displayConduitSubcategory(subcategory) {
 
 // Optional: Load the first subcategory by default when the page loads
 window.onload = function() {
-    displayConduitSubcategory('with-bg');
+    displayConduitSubcategory('View-More');
 };
 
 });
