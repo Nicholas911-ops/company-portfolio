@@ -97,4 +97,21 @@ document.addEventListener("DOMContentLoaded", function() {
             this.classList.add('active');
         });
     });
+
 });
+
+ document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.testimonials-slider', {
+            loop: true,  // Loop through slides
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000,  // Auto-slide every 5 seconds
+                disableOnInteraction: false,  // Continue autoplay after interaction
+            },
+            slidesPerView: 1,  // One testimonial at a time
+            spaceBetween: 20,  // Space between slides
+        });
+    });
