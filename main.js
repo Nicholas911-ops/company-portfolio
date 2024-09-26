@@ -62,24 +62,21 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Handle clicks on dropdown items for the Portfolio dropdown
-    document.querySelectorAll(".portfolio-dropdown .dropdown-item").forEach(item => {
-        item.addEventListener("click", function(event) {
-            event.preventDefault();  // Prevent the default anchor behavior
-
-            const page = this.getAttribute("data-page");  // Get the page attribute from the clicked dropdown item
-            if (page) {
-                loadContent(page);  // Load content for the portfolio
-            }
-        });
-    });
-
-    // Handle clicks on dropdown items for the Customer Support dropdown
-    document.querySelectorAll(".support-dropdown .dropdown-item").forEach(item => {
-        item.addEventListener("click", function(event) {
-            const link = this.getAttribute("href");
-            if (link) {
-                window.open(link, '_blank'); // Open in a new tab for WhatsApp, Email, etc.
+    // Use event delegation for dropdown items
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.addEventListener('click', function(event) {
+            const item = event.target.closest('.dropdown-item'); // Find the clicked dropdown item
+            if (item) {
+                event.preventDefault(); // Prevent the default action
+                const page = item.getAttribute("data-page");
+                if (page) {
+                    loadContent(page); // Load content for products
+                } else {
+                    const link = item.getAttribute("href"); // Handle support links
+                    if (link) {
+                        window.open(link, '_blank'); // Open in a new tab for support
+                    }
+                }
             }
         });
     });
@@ -110,4 +107,182 @@ document.addEventListener("DOMContentLoaded", function() {
         slidesPerView: 1,  // One testimonial at a time
         spaceBetween: 20,  // Space between slides
     });
+
+    // Example data for each subcategory
+    const subcategoryProducts = {
+        'full-moon-lights': [
+        {
+            name: 'Full Moon Light',
+            description: 'A stylish, energy-efficient LED light designed to enhance modern interior spaces.',
+            image: 'images/fullmoonlights.jpg',
+        },
+        {
+            name: 'Small Full Moon',
+            description: 'Compact and efficient LED for smaller spaces, offering balanced and soft lighting.',
+            image: 'images/smallfullmoon.jpg',
+        },
+        {
+            name: 'Optonica 72W',
+            description: 'High-power 72W LED, ideal for large rooms needing bright, expansive illumination.',
+            image: 'images/Optonica72W.png',
+        },
+        {
+            name: 'No.9 Full Moon',
+            description: 'Sleek and minimalistic LED light, perfect for modern homes requiring bright, uniform lighting.',
+            image: 'images/no.9fullmoon.png',
+        },
+        {
+            name: 'Optonica Full Moon',
+            description: 'An energy-saving full moon LED with a stylish design, great for both home and office spaces.',
+            image: 'images/Optonicafullmoon.jpg',
+        },
+        {
+            name: 'Half Moon',
+            description: 'A half-circle LED that offers soft ambient lighting, perfect for hallways or mood lighting.',
+            image: 'images/Halfmoon.jpg',
+        }
+    ],
+
+    'wall-brackets': [
+        {
+            name: 'Modern Wall Bracket',
+            description: 'Stylish modern design for living room walls.',
+            image: 'images/wallbracket1.jpg',
+        },
+        {
+            name: 'Antique Wall Bracket',
+            description: 'Elegant antique design for home decoration.',
+            image: 'images/wallbracket2.jpg',
+        }
+    ],
+    'surface-panels': [
+        {
+            name: 'Slim Surface Panel',
+            description: 'Ultra-slim panel for stylish ceilings.',
+            image: 'images/surfacepanel1.jpg',
+        },
+        {
+            name: 'Square Surface Panel',
+            description: 'Bright square panel for kitchens and offices.',
+            image: 'images/surfacepanel2.jpg',
+        }
+    ]
+};
+
+// Function to display products based on selected subcategory
+function displaySubcategory(subcategory) {
+    const productContainer = document.getElementById('lightingProducts');
+    productContainer.innerHTML = ''; // Clear any existing content
+
+    // Fetch the products for the selected subcategory
+    const products = subcategoryProducts[subcategory];
+
+    if (products) {
+        // Generate and insert product cards
+        products.forEach(product => {
+            const productCard = `
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text">${product.description}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            productContainer.innerHTML += productCard;
+        });
+    } else {
+        productContainer.innerHTML = '<p>No products found for this subcategory.</p>';
+    }
+}
+
+// Optional: Load the first subcategory by default
+window.onload = function() {
+    displaySubcategory('full-moon-lights');
+};
+
+// Example data for Conduit & Fittings subcategories
+const conduitSubcategoryProducts = {
+    'with-bg': [
+        {
+            name: '20mm Conduit Everest with BG',
+            description: 'A 20mm conduit pipe with BG, providing superior strength and electrical insulation, ideal for long-lasting installations.',
+            image: 'images/20mm Conduit Everest.jpg',
+        },
+        {
+            name: '25mm Conduit Everest with BG',
+            description: 'A durable 25mm BG conduit for enhanced protection and easy installation in commercial or residential buildings.',
+            image: 'images/25 mm Conduit Everest.jpg',
+        },
+        {
+            name: '32mm Conduit Everest with BG',
+            description: '32mm conduit with BG for secure and robust wiring systems, ensuring seamless and protective connections.',
+            image: 'images/32 Conduit Everest.jpg',
+        },
+        {
+            name: '50mm Conduit Everest with BG',
+            description: 'A heavy-duty 50mm BG conduit for large-scale installations, designed for smooth and efficient directional conduit setups.',
+            image: 'images/50mm Conduit Everest.jpg',
+        }
+    ],
+    'without-bg': [
+        {
+            name: '20mm Conduit Everest',
+            description: 'A standard 20mm conduit pipe without BG, suitable for basic wiring installations in small to medium projects.',
+            image: 'images/20mm CE(without BG).jpg',
+        },
+        {
+            name: '25mm Conduit Everest',
+            description: 'A 25mm conduit pipe without BG, providing a cost-effective solution for standard electrical protection.',
+            image: 'images/25 mm CE (Without BG).jpg',
+        },
+        {
+            name: '32mm Conduit Everest',
+            description: '32mm conduit without BG, offering reliable protection for wiring in basic installations where heavy-duty protection is not required.',
+            image: 'images/32 mm CE (Without BG).jpg',
+        },
+        {
+            name: '50mm Conduit Everest',
+            description: '50mm conduit without BG, ideal for standard electrical installations, ensuring reliable wiring connections without extra reinforcement.',
+            image: 'images/50 mm CE(Without BG).jpg',
+        }
+    ]
+};
+
+// Function to display products based on selected conduit subcategory
+function displayConduitSubcategory(subcategory) {
+    const productContainer = document.getElementById('conduitProducts');
+    productContainer.innerHTML = ''; // Clear any existing content
+
+    // Fetch the products for the selected subcategory
+    const products = conduitSubcategoryProducts[subcategory];
+
+    if (products) {
+        // Generate and insert product cards
+        products.forEach(product => {
+            const productCard = `
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text">${product.description}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+            productContainer.innerHTML += productCard;
+        });
+    } else {
+        productContainer.innerHTML = '<p>No products found for this subcategory.</p>';
+    }
+}
+
+// Optional: Load the first subcategory by default when the page loads
+window.onload = function() {
+    displayConduitSubcategory('with-bg');
+};
+
 });

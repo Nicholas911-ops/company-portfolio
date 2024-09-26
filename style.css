@@ -229,7 +229,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 0 0 auto; /* Auto-fit card height and width */
     max-width: 300px; /* Set a maximum width for responsiveness */
-    min-height: 250px; /* Ensure a minimum height */
+    min-height: 350px; /* Ensure a minimum height */
 }
 
 .card:hover {
@@ -237,7 +237,7 @@ header {
 }
 
 .card-img-top {
-    height: 150px;
+    height: 250px;
     object-fit: cover;
 }
 
