@@ -577,7 +577,7 @@ footer .social-icons a:hover {
       margin: 0 auto; /* Center cards in the container */
     }
     .card-img-top {
-      height: 150px; /* Adjust image height for smaller screens */
+      height: 180px; /* Adjust image height for smaller screens */
     }
     .card-text {
       font-size: 0.8rem; /* Reduce font size for better readability */
