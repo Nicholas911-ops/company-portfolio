@@ -37,14 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
             default:
                 content = 'home-section';  // Default to home section if no match
         }
-        
 
         // Clear the content container
         const container = document.getElementById("contentContainer");
         container.innerHTML = '';  // Clear existing content
 
         // Find the section to append
-        const section = document.getElementById(page + '-section');
+        const section = document.getElementById(content);
         if (section) {
             // Clone the section
             const clonedSection = section.cloneNode(true);
@@ -64,28 +63,27 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Handle clicks on dropdown items for the Portfolio dropdown
-    document.querySelectorAll(".dropdown-item").forEach(item => {
+    document.querySelectorAll(".portfolio-dropdown .dropdown-item").forEach(item => {
         item.addEventListener("click", function(event) {
             event.preventDefault();  // Prevent the default anchor behavior
 
             const page = this.getAttribute("data-page");  // Get the page attribute from the clicked dropdown item
             if (page) {
-                loadContent(page);  // Your function to load content
+                loadContent(page);  // Load content for the portfolio
             }
         });
     });
 
     // Handle clicks on dropdown items for the Customer Support dropdown
-    document.querySelectorAll(".dropdown-item").forEach(item => {
-        // No need to prevent default for links like phone, WhatsApp, and email
-        // These should open external applications or services as usual
+    document.querySelectorAll(".support-dropdown .dropdown-item").forEach(item => {
         item.addEventListener("click", function(event) {
-            // You can add any custom logic here if needed
-            // For instance, logging click events or handling analytics
+            const link = this.getAttribute("href");
+            if (link) {
+                window.open(link, '_blank'); // Open in a new tab for WhatsApp, Email, etc.
+            }
         });
     });
 
-      
     // Nav link active class handling
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     navLinks.forEach(link => {
@@ -98,20 +96,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-});
-
- document.addEventListener('DOMContentLoaded', function () {
-        var swiper = new Swiper('.testimonials-slider', {
-            loop: true,  // Loop through slides
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 5000,  // Auto-slide every 5 seconds
-                disableOnInteraction: false,  // Continue autoplay after interaction
-            },
-            slidesPerView: 1,  // One testimonial at a time
-            spaceBetween: 20,  // Space between slides
-        });
+    // Swiper initialization
+    var swiper = new Swiper('.testimonials-slider', {
+        loop: true,  // Loop through slides
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 5000,  // Auto-slide every 5 seconds
+            disableOnInteraction: false,  // Continue autoplay after interaction
+        },
+        slidesPerView: 1,  // One testimonial at a time
+        spaceBetween: 20,  // Space between slides
     });
+});
