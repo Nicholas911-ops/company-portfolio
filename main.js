@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Example data for each subcategory
-    const subcategoryProducts = {
+    const lightingProducts = {
         'full-moon-lights': [
         {
             name: 'Full Moon Light',
@@ -169,40 +169,6 @@ document.addEventListener("DOMContentLoaded", function() {
     ]
 };
 
-// Function to display products based on selected subcategory
-function displaySubcategory(subcategory) {
-    const productContainer = document.getElementById('lightingProducts');
-    productContainer.innerHTML = ''; // Clear any existing content
-
-    // Fetch the products for the selected subcategory
-    const products = subcategoryProducts[subcategory];
-
-    if (products) {
-        // Generate and insert product cards
-        products.forEach(product => {
-            const productCard = `
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="${product.image}" class="card-img-top" alt="${product.name}">
-                        <div class="card-body">
-                            <h5 class="card-title">${product.name}</h5>
-                            <p class="card-text">${product.description}</p>
-                        </div>
-                    </div>
-                </div>
-            `;
-            productContainer.innerHTML += productCard;
-        });
-    } else {
-        productContainer.innerHTML = '<p>No products found for this subcategory.</p>';
-    }
-}
-
-// Optional: Load the first subcategory by default
-window.onload = function() {
-    displaySubcategory('full-moon-lights');
-};
-
 // Example data for Conduit & Fittings subcategories
 const conduitSubcategoryProducts = {
     'View-More': [
@@ -230,28 +196,14 @@ const conduitSubcategoryProducts = {
 
 };
 
-// Function to display products based on selected conduit subcategory
-function displayConduitSubcategory(subcategory) {
-    const productContainer = document.getElementById('conduitProducts');
-    productContainer.innerHTML = ''; // Clear any existing content
-
-    // Fetch the products for the selected subcategory
-    const products = conduitSubcategoryProducts[subcategory];
-
+ // Separate display functions for each product type
+ function displayLightingProducts(subcategory) {
+    const productContainer = document.getElementById('lightingProducts');
+    productContainer.innerHTML = '';
+    const products = lightingProducts[subcategory];
     if (products) {
-        // Generate and insert product cards
         products.forEach(product => {
-            const productCard = `
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm">
-                        <img src="${product.image}" class="card-img-top" alt="${product.name}">
-                        <div class="card-body">
-                            <h5 class="card-title">${product.name}</h5>
-                            <p class="card-text">${product.description}</p>
-                        </div>
-                    </div>
-                </div>
-            `;
+            const productCard = `<div class="col-md-4 mb-4"><div class="card"><img src="${product.image}" alt="${product.name}" class="card-img-top"><div class="card-body"><h5 class="card-title">${product.name}</h5><p class="card-text">${product.description}</p></div></div></div>`;
             productContainer.innerHTML += productCard;
         });
     } else {
@@ -259,9 +211,24 @@ function displayConduitSubcategory(subcategory) {
     }
 }
 
-// Optional: Load the first subcategory by default when the page loads
+function displayConduitProducts(subcategory) {
+    const productContainer = document.getElementById('conduitProducts');
+    productContainer.innerHTML = '';
+    const products = conduitProducts[subcategory];
+    if (products) {
+        products.forEach(product => {
+            const productCard = `<div class="col-md-4 mb-4"><div class="card"><img src="${product.image}" alt="${product.name}" class="card-img-top"><div class="card-body"><h5 class="card-title">${product.name}</h5><p class="card-text">${product.description}</p></div></div></div>`;
+            productContainer.innerHTML += productCard;
+        });
+    } else {
+        productContainer.innerHTML = '<p>No products found for this subcategory.</p>';
+    }
+}
+
+// Proper window load handling
 window.onload = function() {
-    displayConduitSubcategory('View-More');
+    displayLightingProducts('full-moon-lights');
+    displayConduitProducts('View-More');
 };
 
 });
