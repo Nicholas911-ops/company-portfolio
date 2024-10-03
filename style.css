@@ -572,7 +572,7 @@ footer .social-icons a:hover {
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     .card {
-      width: 100%; /* Make cards full width on smaller screens */
+      width: 90%; /* Make cards full width on smaller screens */
       padding: 1rem;
       margin: 0 auto; /* Center cards in the container */
     }
@@ -580,7 +580,7 @@ footer .social-icons a:hover {
         object-fit: contain; /* Ensure the image covers the available space */
         width: 100%;       /* Set image width to 100% of the card's width */
         height: auto;      /* Automatically adjust height while maintaining aspect ratio */
-        max-height: 277px; /* Optional: Limit the maximum height of the image */
+        max-height: 280px; /* Optional: Limit the maximum height of the image */
     }
     .card-text {
       font-size: 0.8rem; /* Reduce font size for better readability */
