@@ -238,7 +238,7 @@ header {
 
 .card-img-top {
     height: 360px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .card-body {
@@ -577,7 +577,7 @@ footer .social-icons a:hover {
       margin: 0 auto; /* Center cards in the container */
     }
     .card-img-top {
-        object-fit: cover; /* Ensure the image covers the available space */
+        object-fit: contain; /* Ensure the image covers the available space */
         width: 100%;       /* Set image width to 100% of the card's width */
         height: auto;      /* Automatically adjust height while maintaining aspect ratio */
         max-height: 277px; /* Optional: Limit the maximum height of the image */
