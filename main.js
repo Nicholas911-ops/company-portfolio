@@ -93,6 +93,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    // Add event listener for the "Get Started" button
+    getStartedBtn.addEventListener('click', function(event) {
+        event.preventDefault();  // Prevent default anchor behavior
+        loadPageContent('home');  // Load the "home" page content
+    });
+
     // Swiper initialization
     var swiper = new Swiper('.testimonials-slider', {
         loop: true,  // Loop through slides
