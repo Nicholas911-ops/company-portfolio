@@ -580,7 +580,7 @@ footer .social-icons a:hover {
     .card {
         max-width: 100%; /* Let the card fill available width */
         min-height: 250px; /* Adjust to better fit the content */
-        padding: 1rem; /* Provide padding inside the card */
+        padding: 0.5rem; /* Provide padding inside the card */
         margin: 0 auto; /* Center the card in the grid */
         border: none; /* Ensure no visible borders */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for better visibility */
@@ -597,17 +597,17 @@ footer .social-icons a:hover {
     }
 
     .card-body {
-        padding: 0.8rem; /* Add some spacing around text */
+        padding: 0.3rem; /* Add some spacing around text */
         text-align: center; /* Center the text for a balanced look */
     }
 
     .card-title {
-        font-size: 0.8rem; /* Slightly reduce font size for smaller screens */
+        font-size: 1rem; /* Slightly reduce font size for smaller screens */
         font-weight: 600; /* Keep the title bold and visible */
     }
 
     .card-text {
-        font-size: 0.75rem; /* Smaller font size for the description */
+        font-size: 0.85rem; /* Smaller font size for the description */
         line-height: 1.3; /* Provide enough space between lines */
         color: #666; /* Lighter text color for description */
     }
