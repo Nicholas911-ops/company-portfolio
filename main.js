@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             name: 'Optonica 72W',
             description: 'High-power 72W LED, ideal for large rooms needing bright, expansive illumination.',
-            image: 'images/Optonica72W.png',
+            image: 'images/SQUARE CEILING LIGHT WHITE (1).png',
         },
         {
             name: 'No.9 Full Moon',

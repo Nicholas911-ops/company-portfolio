@@ -228,8 +228,8 @@ header {
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 0 0 auto; /* Auto-fit card height and width */
-    max-width: 350px; /* Set a maximum width for responsiveness */
-    min-height: 400px; /* Ensure a minimum height */
+    max-width: 250px; /* Set a maximum width for responsiveness */
+    min-height: 270px; /* Ensure a minimum height */
 }
 
 .card:hover {
@@ -237,7 +237,7 @@ header {
 }
 
 .card-img-top {
-    height: 360px;
+    height: 150px;
     object-fit: contain;
 }
 
@@ -248,7 +248,7 @@ header {
 
 .card-title {
     margin-bottom: 0.5rem;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
 }
 
