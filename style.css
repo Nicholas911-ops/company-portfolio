@@ -573,21 +573,49 @@ footer .social-icons a:hover {
 }
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
+    .col-6 {
+        padding: 0.5rem; /* Add padding between cards */
+    }
+
     .card {
-      max-width: 250px; /* Set a maximum width for responsiveness */
-      min-height: 270px; /* Ensure a minimum height */
-      width: 90%; /* Make cards full width on smaller screens */
-      padding: 1rem;
-      margin: 0 auto; /* Center cards in the container */
+        max-width: 100%; /* Let the card fill available width */
+        min-height: 250px; /* Adjust to better fit the content */
+        padding: 1rem; /* Provide padding inside the card */
+        margin: 0 auto; /* Center the card in the grid */
+        border: none; /* Ensure no visible borders */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for better visibility */
+        border-radius: 10px; /* Round the corners for a modern look */
+        transition: transform 0.3s ease-in-out;
     }
+
     .card-img-top {
-        object-fit: contain; /* Ensure the image covers the available space */
-        width: 100%;       /* Set image width to 100% of the card's width */
-        height: 150px;     
-        max-height: 280px; /* Optional: Limit the maximum height of the image */
-        border: 1px solid rgba(0, 0, 0, 0); /* Fully transparent border */
+        object-fit: cover; /* Ensure image covers the card properly */
+        width: 100%; /* Full width inside the card */
+        height: auto; /* Let the height adjust automatically */
+        max-height: 200px; /* Limit max height of the image to prevent oversized images */
+        border-radius: 10px 10px 0 0; /* Round the image corners to match the card */
     }
+
+    .card-body {
+        padding: 0.8rem; /* Add some spacing around text */
+        text-align: center; /* Center the text for a balanced look */
+    }
+
+    .card-title {
+        font-size: 0.8rem; /* Slightly reduce font size for smaller screens */
+        font-weight: 600; /* Keep the title bold and visible */
+    }
+
     .card-text {
-      font-size: 0.8rem; /* Reduce font size for better readability */
+        font-size: 0.75rem; /* Smaller font size for the description */
+        line-height: 1.3; /* Provide enough space between lines */
+        color: #666; /* Lighter text color for description */
     }
-  }
+
+    /* Optional: Add hover effect */
+    .card:hover {
+        transform: scale(1.05); /* Slightly increase size on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    }
+}
+
