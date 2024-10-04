@@ -585,6 +585,7 @@ footer .social-icons a:hover {
         width: 100%;       /* Set image width to 100% of the card's width */
         height: 150px;     
         max-height: 280px; /* Optional: Limit the maximum height of the image */
+        border: 1px solid rgba(0, 0, 0, 0); /* Fully transparent border */
     }
     .card-text {
       font-size: 0.8rem; /* Reduce font size for better readability */
