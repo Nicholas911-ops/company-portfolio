@@ -571,6 +571,16 @@ footer .social-icons a:hover {
         font-size: 1.2rem;
     }
 }
+
+/* Add this CSS for card spacing */
+@media (max-width: 576px) {
+    .mission-card, .vision-card, .goals-card {
+        margin-bottom: 15px; /* Adjusts the space between cards on mobile */
+        width: 100%; /* Ensures cards take full width */
+    }
+}
+
+
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     .col-6 {
