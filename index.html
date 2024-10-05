@@ -46,13 +46,18 @@
                             <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
                             <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
                                 <li><a class="dropdown-item" href="#" data-page="cables">Cables</a></li> 
-                                <li><a class="dropdown-item" href="#" data-page="lighting-accessories">Lighting Accessories (Bulbs)</a></li>
+                                <li><a class="dropdown-item" href="#" data-page="chandeliers">Chandeliers</a></li>
+                                <li><a class="dropdown-item" href="#" data-page="floodlights">Floodlights</a></li>
+                                <li><a class="dropdown-item" href="#" data-page="led-panel-lights">LED Panel Lights</a></li>
+                                <li><a class="dropdown-item" href="#" data-page="moon-lights">Moon Lights</a></li>
+                                <li><a class="dropdown-item" href="#" data-page="pendant-lights">Pendant Lights</a></li>
+                                <li><a class="dropdown-item" href="#" data-page="showers">Showers</a></li>
                                 <li><a class="dropdown-item" href="#" data-page="meter-boxes">Meter Boxes/Other Fabrications</a></li>
                                 <li><a class="dropdown-item" href="#" data-page="conduit-and-fittings">Conduit & Fittings</a></li>
                                 <li><a class="dropdown-item" href="#" data-page="sockets-switches">Sockets & Switches</a></li>
                                 <li><a class="dropdown-item" href="#" data-page="padlocks">Padlocks</a></li>
                             </ul>
-                        </li>                        
+                        </li>                                          
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="letsTalkDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Customer Support</a>
                             <ul class="dropdown-menu" aria-labelledby="letsTalkDropdown">
@@ -103,10 +108,12 @@
                                 <div class="card-body text-center">
                                     <h4 class="card-title">Cooker Sockets</h4>
                                     <p class="card-text">High-quality cooker sockets for your kitchen.</p>
-                                    <a href="#cooker-sockets" class="btn btn-warning text-dark">View More</a>
+                                    <!-- Assign an ID to the button -->
+                                    <a href="#sockets-switches" id="viewMoreCookerSocketsBtn" class="btn btn-warning text-dark">View More</a>
                                 </div>
                             </div>
                         </div>
+
 
                         <!-- Full Moonlights Card -->
                         <div class="col-md-3 col-6 mb-4">
@@ -150,11 +157,12 @@
                                 <img src="images/Powder Coated Enclosed Meter Boxes.jpg" class="card-img-top" alt="Fabrications">
                                 <div class="card-body text-center">
                                     <h4 class="card-title">Fabrications</h4>
-                                    <p class="card-text">Electric Poles,Looping Boxes,Meter Boxes,LG Boxes[coated],LG Normal,Adapters.</p>
-                                    <a href="#fabricators" class="btn btn-warning text-dark">View More</a>
+                                    <p class="card-text">Electric Poles, Looping Boxes, Meter Boxes, LG Boxes[coated], LG Normal, Adapters.</p>
+                                    <a href="#meter-boxes" id="viewMoreFabricationsBtn" class="btn btn-warning text-dark">View More</a>
                                 </div>
                             </div>
                         </div>
+
 
                         <!-- floodlights Product Card -->
                         <div class="col-md-3 col-6 mb-4">
@@ -485,63 +493,1153 @@
 
     <!--dropdown menus page section -->
 
-    <!-- Portfolio - Lighting Accessories -->
-    <section id="lighting-accessories-section" style="display: none;">
+    <!-- Portfolio - chandeliers section-->
+    <section id="chandeliers-section" style="display: none;">
         <div class="container my-5">
-            <h2 class="text-center mb-4" style="color: #e67e22;">Lighting Accessories</h2>
-            <p class="text-center mb-5">Explore our range of lighting accessories.</p>
-
-            <!-- Subcategory Buttons -->
-            <div class="d-flex justify-content-center mb-4">
-                <button class="btn btn-outline-primary mx-2" onclick="displayLightingProducts('full-moon-lights')">Full Moon Lights</button>
-                <button class="btn btn-outline-primary mx-2" onclick="displayLightingProducts('wall-brackets')">Wall Brackets</button>
-                <button class="btn btn-outline-primary mx-2" onclick="displayLightingProducts('surface-panels')">Surface Panels</button>
-                <!-- Add more subcategories as needed -->
-            </div>
+            <h2 class="text-center mb-4" style="color: #e67e22;">Chandelier Bulbs</h2>
+            <p class="text-center mb-5">Explore our range of Chandeliers available in our merchandise</p>
 
                     <!-- Product Display Section -->
-                    <div class="row" id="lightingProducts">
-                        <!-- Default Product Cards -->
-                        <div class="col-md-3 col-6 mb-4">
-                            <div class="card">
-                                <img src="images/Full Moon Purple.png" class="card-img-top" alt="Default Full Moon Purple">
-                                <div class="card-body">
-                                    <h5 class="card-title">Full Moon Light</h5>
-                                    <p class="card-text">A stylish, energy-efficient LED light for general use.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-4">
-                            <div class="card">
-                                <img src="images/no.9fullmoon.png" class="card-img-top" alt="Default Product 2">
-                                <div class="card-body">
-                                    <h5 class="card-title">No.9 Full Moon Light</h5>
-                                    <p class="card-text">Bright and durable, perfect for living rooms or office spaces.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-6 mb-4">
-                            <div class="card">
-                                <img src="images/Optonica72W.png" class="card-img-top" alt="Default Product 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Optonica 72W </h5>
-                                    <p class="card-text">Smart lighting solution with multiple color options.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="row" id="ChandelierProducts">
 
                         <div class="col-md-3 col-6 mb-4">
                             <div class="card">
-                                <img src="images/SQUARE CEILING LIGHT WHITE (1).png" class="card-img-top" alt="Square Ceiling Light White">
+                                <img src="images/800MM Crystal Rod LED Chandelier Contemporary Gold Drum.png" class="card-img-top" alt="800MM Crystal Rod LED Chandelier Contemporary Gold Drum">
                                 <div class="card-body">
-                                    <h5 class="card-title">Square Ceiling Light White</h5>
-                                    <p class="card-text"> Energy-efficient illumination Square LED ceiling light. </p>
+                                    <h5 class="card-title">800MM Crystal Rod LED Chandelier</h5>
+                                    <p class="card-text">Contemporary gold drum design with elegant crystal rods.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Crystal Chandelier 40cm wide - Black & Gold.jpg" class="card-img-top" alt="Crystal Chandelier 40cm wide - Black & Gold">
+                                <div class="card-body">
+                                    <h5 class="card-title">Crystal Chandelier 40cm Wide - Black & Gold</h5>
+                                    <p class="card-text">A stylish black and gold chandelier that adds elegance to any space.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Crystal Rod LED Chandelier Contemporary Gold Drum.png" class="card-img-top" alt="Crystal Rod LED Chandelier Contemporary Gold Drum">
+                                <div class="card-body">
+                                    <h5 class="card-title">Crystal Rod LED Chandelier</h5>
+                                    <p class="card-text">A stunning contemporary chandelier with LED lighting and crystal rods.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/LED Half Moon ring chandelier pendant light.jpg" class="card-img-top" alt="LED Half Moon Ring Chandelier Pendant Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">LED Half Moon Ring Chandelier</h5>
+                                    <p class="card-text">Sleek and modern pendant light with a half-moon design.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Lorenzetti advanced instant shower.jpg" class="card-img-top" alt="Lorenzetti Advanced Instant Shower">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorenzetti Advanced Instant Shower</h5>
+                                    <p class="card-text">Efficient instant shower with advanced features for a luxurious experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Lorenzetti Maxi Ducha Ultra 3T instant shower.jpg" class="card-img-top" alt="Lorenzetti Maxi Ducha Ultra 3T Instant Shower">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorenzetti Maxi Ducha Ultra 3T</h5>
+                                    <p class="card-text">Ultra instant shower with three temperature settings for optimal comfort.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Luxury Cream Feather Style Crystal Chandelier.png" class="card-img-top" alt="Luxury Cream Feather Style Crystal Chandelier">
+                                <div class="card-body">
+                                    <h5 class="card-title">Luxury Cream Feather Style Crystal Chandelier</h5>
+                                    <p class="card-text">An elegant chandelier featuring a luxurious cream feather design.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Modern crystal chandelier Round crystal Gold LED Light.jpg" class="card-img-top" alt="Modern Crystal Chandelier Round Crystal Gold LED Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Modern Crystal Chandelier</h5>
+                                    <p class="card-text">Round crystal design with gold accents, providing a modern touch.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Modern minimalist crystal chandelier light.png" class="card-img-top" alt="Modern Minimalist Crystal Chandelier Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Modern Minimalist Crystal Chandelier</h5>
+                                    <p class="card-text">A minimalist chandelier with crystal elements for a chic look.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Modern Sputnik Glass Spiral Glass Globe Chanderlier.jpg" class="card-img-top" alt="Modern Sputnik Glass Spiral Glass Globe Chandelier">
+                                <div class="card-body">
+                                    <h5 class="card-title">Modern Sputnik Glass Spiral Chandelier</h5>
+                                    <p class="card-text">Unique spiral design with glass globes, perfect for modern decor.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/SMACKO Chandelier Shell Lights.jpg" class="card-img-top" alt="SMACKO Chandelier Shell Lights">
+                                <div class="card-body">
+                                    <h5 class="card-title">SMACKO Chandelier Shell Lights</h5>
+                                    <p class="card-text">Stylish shell lights chandelier that brings elegance to any room.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Teardrop Crystal LED Chandelier - Single Ball Shape Chandelier.jpg" class="card-img-top" alt="Teardrop Crystal LED Chandelier - Single Ball Shape">
+                                <div class="card-body">
+                                    <h5 class="card-title">Teardrop Crystal LED Chandelier</h5>
+                                    <p class="card-text">Single ball shape chandelier with teardrop crystals for a stunning effect.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/White Modern Led Crystal Chandelier Glasses.jpg" class="card-img-top" alt="White Modern LED Crystal Chandelier Glasses">
+                                <div class="card-body">
+                                    <h5 class="card-title">White Modern LED Crystal Chandelier</h5>
+                                    <p class="card-text">Sleek white design with LED and crystal elements for a modern touch.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+             </div>
+        </div>
+    </section>
+
+      <!-- Portfolio - floodlights section-->
+      <section id="floodlights-section" style="display: none;">
+        <div class="container my-5">
+            <h2 class="text-center mb-4" style="color: #e67e22;">Floodlights Bulbs</h2>
+            <p class="text-center mb-5">Explore our range of floodlights bulbs available in our merchandise</p>
+
+                    <!-- Product Display Section -->
+                    <div class="row" id="floodlightsProducts">
+
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/2w Solar Powered Ground Lights.png" class="card-img-top" alt="2w Solar Powered Ground Lights">
+                                <div class="card-body">
+                                    <h5 class="card-title">2w Solar Powered Ground Lights</h5>
+                                    <p class="card-text">Energy-efficient solar-powered ground lights for outdoor illumination.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/36 watt solar led street light with metal arm.jpg" class="card-img-top" alt="36 Watt Solar LED Street Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">36 Watt Solar LED Street Light</h5>
+                                    <p class="card-text">High-efficiency solar street light with a durable metal arm.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/100 Watt Solar Floodlight.jpg" class="card-img-top" alt="100 Watt Solar Floodlight">
+                                <div class="card-body">
+                                    <h5 class="card-title">100 Watt Solar Floodlight</h5>
+                                    <p class="card-text">Bright solar floodlight designed for versatile outdoor use.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/200 Watt Neelux Solar Street Light.jpg" class="card-img-top" alt="200 Watt Neelux Solar Street Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">200 Watt Neelux Solar Street Light</h5>
+                                    <p class="card-text">Powerful solar street light offering optimal visibility at night.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/200 Watts Optonica Solar Integrated Solar Street Light (With Mounting Arm).jpg" class="card-img-top" alt="200 Watts Optonica Solar Integrated Street Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">200 Watts Optonica Solar Integrated Street Light</h5>
+                                    <p class="card-text">Integrated solar street light with advanced features for safety.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Big Base Solar Pillar Gate light -TW.jpg" class="card-img-top" alt="Big Base Solar Pillar Gate Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Big Base Solar Pillar Gate Light</h5>
+                                    <p class="card-text">Elegant solar pillar gate light for enhanced security and style.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/DANCING FLAME SOLAR GARDEN LIGHT.jpeg" class="card-img-top" alt="Dancing Flame Solar Garden Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dancing Flame Solar Garden Light</h5>
+                                    <p class="card-text">Create a warm ambiance with these dancing flame solar lights.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/LED Solar Floodlight.png" class="card-img-top" alt="LED Solar Floodlight">
+                                <div class="card-body">
+                                    <h5 class="card-title">LED Solar Floodlight</h5>
+                                    <p class="card-text">Energy-efficient LED solar floodlight for bright outdoor lighting.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/LED Solar motion sensor floodlight.jpg" class="card-img-top" alt="LED Solar Motion Sensor Floodlight">
+                                <div class="card-body">
+                                    <h5 class="card-title">LED Solar Motion Sensor Floodlight</h5>
+                                    <p class="card-text">Solar motion sensor floodlight for added security and convenience.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Neelux 200 Watt Solar LED Floodlight.jpg" class="card-img-top" alt="Neelux 200 Watt Solar LED Floodlight">
+                                <div class="card-body">
+                                    <h5 class="card-title">Neelux 200 Watt Solar LED Floodlight</h5>
+                                    <p class="card-text">High brightness solar floodlight suitable for large areas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Round Big Base Solar Angle Wall Light.jpg" class="card-img-top" alt="Round Big Base Solar Angle Wall Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Round Big Base Solar Angle Wall Light</h5>
+                                    <p class="card-text">Stylish wall light with a unique design for outdoor settings.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Round Solar Garden light.jpg" class="card-img-top" alt="Round Solar Garden Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Round Solar Garden Light</h5>
+                                    <p class="card-text">Classic round design solar garden light for beautiful landscapes.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Solar LED wall light with a wall extension bracket.jpg" class="card-img-top" alt="Solar LED Wall Light with Extension Bracket">
+                                <div class="card-body">
+                                    <h5 class="card-title">Solar LED Wall Light with Extension Bracket</h5>
+                                    <p class="card-text">Versatile solar LED wall light with adjustable bracket for easy installation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/solar-pillar-light-1.jpg" class="card-img-top" alt="Solar Pillar Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Solar Pillar Light</h5>
+                                    <p class="card-text">Sleek solar pillar light ideal for illuminating pathways and gardens.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Square Solar Garden Light.jpg" class="card-img-top" alt="Square Solar Garden Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Square Solar Garden Light</h5>
+                                    <p class="card-text">Modern square design solar garden light for contemporary outdoor aesthetics.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/watt Solar LED Street Light System.jpg" class="card-img-top" alt="Watt Solar LED Street Light System">
+                                <div class="card-body">
+                                    <h5 class="card-title">Watt Solar LED Street Light System</h5>
+                                    <p class="card-text">Reliable solar LED street light system for urban lighting solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Watts DP Light Solar Flood Light.jpg" class="card-img-top" alt="Watts DP Light Solar Flood Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Watts DP Light Solar Flood Light</h5>
+                                    <p class="card-text">High-performance solar flood light with robust design for outdoor areas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Watts Vellmax Solar Floodlight.jpg" class="card-img-top" alt="Watts Vellmax Solar Floodlight">
+                                <div class="card-body">
+                                    <h5 class="card-title">Watts Vellmax Solar Floodlight</h5>
+                                    <p class="card-text">Powerful solar floodlight designed for maximum brightness and efficiency.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+             </div>
+        </div>
+    </section>
+
+          <!-- Portfolio - LED Panel Lights section-->
+          <section id="led-panel-lights-section" style="display: none;">
+            <div class="container my-5">
+                <h2 class="text-center mb-4" style="color: #e67e22;">LED Panel Lights</h2>
+                <p class="text-center mb-5">Explore our range of LED Panel lights available in our merchandise</p>
+    
+                        <!-- Product Display Section -->
+                        <div class="row" id="LEDPanel-lightsProducts">
+    
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/5W Glass Gypsum Panel Lights.png" class="card-img-top" alt="5W Glass Gypsum Panel Lights">
+                                    <div class="card-body">
+                                        <h5 class="card-title">5W Glass Gypsum Panel Lights</h5>
+                                        <p class="card-text">Elegant glass gypsum panel lights for interior lighting.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/360 Waterproof LED Strip Light Neon Flexible Rope Tube 220V.jpeg" class="card-img-top" alt="360 Waterproof LED Strip Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">360 Waterproof LED Strip Light</h5>
+                                        <p class="card-text">Flexible waterproof LED strip light for creative lighting projects.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Cabinet Panel Lights.jpg" class="card-img-top" alt="Cabinet Panel Lights">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cabinet Panel Lights</h5>
+                                        <p class="card-text">Slim and stylish panel lights for cabinet lighting.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Glass Gypsum Panel Lights.png" class="card-img-top" alt="Glass Gypsum Panel Lights">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Glass Gypsum Panel Lights</h5>
+                                        <p class="card-text">Modern gypsum panel lights for smooth ambient lighting.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Indoor PIR Motion sensor Lamp Surface Mount.png" class="card-img-top" alt="Indoor PIR Motion Sensor Lamp">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Indoor PIR Motion Sensor Lamp</h5>
+                                        <p class="card-text">Motion sensor lamp with surface mount design for interior spaces.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/LED Downlighters [Gypsum Downlighters].jpg" class="card-img-top" alt="LED Gypsum Downlighters">
+                                    <div class="card-body">
+                                        <h5 class="card-title">LED Gypsum Downlighters</h5>
+                                        <p class="card-text">High-efficiency LED downlighters for modern interiors.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/LED Recessed Panel Lights.jpg" class="card-img-top" alt="LED Recessed Panel Lights">
+                                    <div class="card-body">
+                                        <h5 class="card-title">LED Recessed Panel Lights</h5>
+                                        <p class="card-text">Sleek LED recessed panel lights for a clean, modern look.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/LED strip snake light.png" class="card-img-top" alt="LED Strip Snake Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">LED Strip Snake Light</h5>
+                                        <p class="card-text">Flexible snake-style LED strip light for creative lighting.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/LED surface panel lights.jpg" class="card-img-top" alt="LED Surface Panel Lights">
+                                    <div class="card-body">
+                                        <h5 class="card-title">LED Surface Panel Lights</h5>
+                                        <p class="card-text">Surface panel lights for efficient interior lighting solutions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/RGB LED Surface panel lights.png" class="card-img-top" alt="RGB LED Surface Panel Lights">
+                                    <div class="card-body">
+                                        <h5 class="card-title">RGB LED Surface Panel Lights</h5>
+                                        <p class="card-text">Color-changing RGB LED panel lights for versatile lighting.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Round Big Base Solar Angle Wall Light.jpg" class="card-img-top" alt="Round Big Base Solar Angle Wall Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Round Big Base Solar Angle Wall Light</h5>
+                                        <p class="card-text">Stylish solar angle wall light with a large base for enhanced durability.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Round Solar Garden light.jpg" class="card-img-top" alt="Round Solar Garden Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Round Solar Garden Light</h5>
+                                        <p class="card-text">Classic round solar garden light for illuminating landscapes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/RGB Recessed Panel light with Remote.jpg" class="card-img-top" alt="RGB Recessed Panel Light with Remote">
+                                    <div class="card-body">
+                                        <h5 class="card-title">RGB Recessed Panel Light with Remote</h5>
+                                        <p class="card-text">Remote-controlled RGB panel lights for customizable ambiance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Round Surface Panel Lights.jpg" class="card-img-top" alt="Round Surface Panel Lights">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Round Surface Panel Lights</h5>
+                                        <p class="card-text">Elegant round surface panel lights for modern interiors.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Square Gypsum Panel Lights.jpg" class="card-img-top" alt="Square Gypsum Panel Lights">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Square Gypsum Panel Lights</h5>
+                                        <p class="card-text">Modern square gypsum panel lights for sleek lighting aesthetics.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Square Surface Panel Light.jpg" class="card-img-top" alt="Square Surface Panel Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Square Surface Panel Light</h5>
+                                        <p class="card-text">Square surface panel light for uniform lighting distribution.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Two color Recessed Gypsum panel lights.jpg" class="card-img-top" alt="Two Color Recessed Gypsum Panel Lights">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Two Color Recessed Gypsum Panel Lights</h5>
+                                        <p class="card-text">Dual-color recessed panel lights for modern lighting versatility.</p>
+                                    </div>
+                                </div>
+                            </div>                            
+                            
+                 </div>
+            </div>
+        </section>
+
+     <!-- Portfolio - Moonlights section-->
+      <section id="moon-lights-section" style="display: none;">
+        <div class="container my-5">
+            <h2 class="text-center mb-4" style="color: #e67e22;">Moonlights Bulbs</h2>
+            <p class="text-center mb-5">Explore our range of Moonlights bulbs available in our merchandise</p>
+
+                    <!-- Product Display Section -->
+                    <div class="row" id="MoonlightsProducts">
+
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/3-Color Ceiling Light Fullmoon.png" class="card-img-top" alt="3-Color Ceiling Light Fullmoon">
+                                <div class="card-body">
+                                    <h5 class="card-title">3-Color Ceiling Light Fullmoon</h5>
+                                    <p class="card-text">A stylish fullmoon ceiling light with 3 color options for a cozy atmosphere.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Crystal Edge Ceiling Light.jpeg" class="card-img-top" alt="Crystal Edge Ceiling Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Crystal Edge Ceiling Light</h5>
+                                    <p class="card-text">An elegant ceiling light featuring a crystal edge for modern interiors.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Crystal Edge Surface Mount Light.jpg" class="card-img-top" alt="Crystal Edge Surface Mount Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Crystal Edge Surface Mount Light</h5>
+                                    <p class="card-text">Sleek surface mount light with a crystal edge design, perfect for low ceilings.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Curvey Stripes Moon Light.jpg" class="card-img-top" alt="Curvey Stripes Moon Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Curvey Stripes Moon Light</h5>
+                                    <p class="card-text">Unique moon light design with curvy stripes for decorative illumination.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/FULL MOON CEILING LIGHT PINK.jpeg" class="card-img-top" alt="Full Moon Ceiling Light (Pink)">
+                                <div class="card-body">
+                                    <h5 class="card-title">Full Moon Ceiling Light (Pink)</h5>
+                                    <p class="card-text">A vibrant pink full moon ceiling light to brighten up any room.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Full Moon Light.png" class="card-img-top" alt="Full Moon Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Full Moon Light</h5>
+                                    <p class="card-text">Classic full moon light for both decorative and functional lighting.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Full Moon Purple.png" class="card-img-top" alt="Full Moon Light (Purple)">
+                                <div class="card-body">
+                                    <h5 class="card-title">Full Moon Light (Purple)</h5>
+                                    <p class="card-text">Bright purple full moon light, adding a vibrant touch to any space.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/FULL MOON-CEILING LIGHT BLUE.png" class="card-img-top" alt="Full Moon Ceiling Light (Blue)">
+                                <div class="card-body">
+                                    <h5 class="card-title">Full Moon Ceiling Light (Blue)</h5>
+                                    <p class="card-text">Cool blue full moon ceiling light for a calming ambiance.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/HALF MOON.png" class="card-img-top" alt="Half Moon Ceiling Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Half Moon Ceiling Light</h5>
+                                    <p class="card-text">Half moon ceiling light for a modern and minimalist design.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Optonica Fullmoon.png" class="card-img-top" alt="Optonica Fullmoon Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Optonica Fullmoon Light</h5>
+                                    <p class="card-text">Optonica's sleek fullmoon light for bright and energy-efficient lighting.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/SQUARE CEILING LIGHT WHITE.png" class="card-img-top" alt="Square Ceiling Light (White)">
+                                <div class="card-body">
+                                    <h5 class="card-title">Square Ceiling Light (White)</h5>
+                                    <p class="card-text">A modern square ceiling light in white, perfect for minimalist interiors.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Small Full Moon.jpg" class="card-img-top" alt="Small Full Moon Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Small Full Moon Light</h5>
+                                    <p class="card-text">Compact full moon light for soft lighting in smaller spaces.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Optonica Full Moon.jpg" class="card-img-top" alt="Optonica Full Moon Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Optonica Full Moon Light</h5>
+                                    <p class="card-text">Bright Optonica full moon light, great for illuminating large areas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+             </div>
+        </div>
+    </section>
+
+          <!-- Portfolio - Pendant Lights Section-->
+          <section id="pendant-lights-section" style="display: none;">
+            <div class="container my-5">
+                <h2 class="text-center mb-4" style="color: #e67e22;">Pendant Lights</h2>
+                <p class="text-center mb-5">Explore our range of Pendant Lights available in our merchandise</p>
+    
+                        <!-- Product Display Section -->
+                        <div class="row" id="PendantlightsProducts">
+    
+                            <div class="row">
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/3 LightGolden Colour Pendant Light [3Bulb].jpg" class="card-img-top" alt="3 Light Golden Colour Pendant Light [3 Bulb]">
+                                        <div class="card-body">
+                                            <h5 class="card-title">3 Light Golden Colour Pendant Light [3 Bulb]</h5>
+                                            <p class="card-text">Elegant pendant light with three golden bulbs for sophisticated lighting.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/3 Lights Rod LED Pendant Light.jpeg" class="card-img-top" alt="3 Lights Rod LED Pendant Light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">3 Lights Rod LED Pendant Light</h5>
+                                            <p class="card-text">Stylish LED pendant light with three rods for a modern look.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/3 Tier Rattan Pendant Light.webp" class="card-img-top" alt="3 Tier Rattan Pendant Light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">3 Tier Rattan Pendant Light</h5>
+                                            <p class="card-text">Beautiful rattan pendant light in three tiers for a natural feel.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/4-Bulb [Multi Lights] Glass Globes Pendant Light.jpg" class="card-img-top" alt="4-Bulb [Multi Lights] Glass Globes Pendant Light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">4-Bulb [Multi Lights] Glass Globes Pendant Light</h5>
+                                            <p class="card-text">Chic glass globe pendant light featuring four multi-colored bulbs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/5 bulb Vintage Hemp Rope Chandelier Pendant Lights.jpg" class="card-img-top" alt="5 Bulb Vintage Hemp Rope Chandelier Pendant Lights">
+                                        <div class="card-body">
+                                            <h5 class="card-title">5 Bulb Vintage Hemp Rope Chandelier Pendant Lights</h5>
+                                            <p class="card-text">Rustic chandelier featuring hemp rope and vintage-style bulbs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/5-Light Industrial Kitchen Island Pendant Light Fixture.jpg" class="card-img-top" alt="5-Light Industrial Kitchen Island Pendant Light Fixture">
+                                        <div class="card-body">
+                                            <h5 class="card-title">5-Light Industrial Kitchen Island Pendant Light Fixture</h5>
+                                            <p class="card-text">Industrial pendant light ideal for kitchen islands with five bulbs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/6- Light Sputnik Sphere Chandelier Ceiling Light.jpg" class="card-img-top" alt="6-Light Sputnik Sphere Chandelier Ceiling Light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">6-Light Sputnik Sphere Chandelier Ceiling Light</h5>
+                                            <p class="card-text">Modern Sputnik chandelier with six lights for a striking appearance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/6bulb Classy Dining Room Glass Chandelier.png" class="card-img-top" alt="6 Bulb Classy Dining Room Glass Chandelier">
+                                        <div class="card-body">
+                                            <h5 class="card-title">6 Bulb Classy Dining Room Glass Chandelier</h5>
+                                            <p class="card-text">Classy glass chandelier with six bulbs for dining room elegance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/6bulb Flush Mounted Sputnik Black Chandelier - Low ceiling lights.jpg" class="card-img-top" alt="6 Bulb Flush Mounted Sputnik Black Chandelier">
+                                        <div class="card-body">
+                                            <h5 class="card-title">6 Bulb Flush Mounted Sputnik Black Chandelier</h5>
+                                            <p class="card-text">Low ceiling Sputnik chandelier in sleek black finish, flush mounted.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/6bulb Simple modern E27 glass chandelier.png" class="card-img-top" alt="6 Bulb Simple Modern E27 Glass Chandelier">
+                                        <div class="card-body">
+                                            <h5 class="card-title">6 Bulb Simple Modern E27 Glass Chandelier</h5>
+                                            <p class="card-text">Simple modern chandelier featuring six E27 glass bulbs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/American retro cafe 2 head Rope Pendant Light.png" class="card-img-top" alt="American Retro Cafe 2-Head Rope Pendant Light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">American Retro Cafe 2-Head Rope Pendant Light</h5>
+                                            <p class="card-text">Retro-style pendant light with two heads and a hemp rope design.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/Black and Gold Sputnik 6 bulb chandelier light.jpg" class="card-img-top" alt="Black and Gold Sputnik 6 Bulb Chandelier">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Black and Gold Sputnik 6 Bulb Chandelier</h5>
+                                            <p class="card-text">Stylish black and gold Sputnik chandelier with six bulbs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/Ceiling Crystal Pendant.jpg" class="card-img-top" alt="Ceiling Crystal Pendant">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Ceiling Crystal Pendant</h5>
+                                            <p class="card-text">Luxurious crystal pendant light for ceiling installations.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/solar-pillar-light-1.jpg" class="card-img-top" alt="Solar Pillar Light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Solar Pillar Light</h5>
+                                            <p class="card-text">Stylish solar-powered pillar light for outdoor pathways and gardens.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/CITRA 4 Ring Metal Brass Gold Modern LED Chandelier Pendant Light Hanging Lamp.jpg" class="card-img-top" alt="CITRA 4 Ring Metal Brass Gold Modern LED Chandelier">
+                                        <div class="card-body">
+                                            <h5 class="card-title">CITRA 4 Ring Metal Brass Gold Modern LED Chandelier</h5>
+                                            <p class="card-text">Modern LED chandelier with a brass gold finish and 4-ring design.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/Design models art corridor staircase pendant light crystal pendant lamp.jpeg" class="card-img-top" alt="Corridor Staircase Crystal Pendant Light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Corridor Staircase Crystal Pendant Light</h5>
+                                            <p class="card-text">Crystal pendant light for artistic corridor and staircase lighting.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-md-3 col-6 mb-4">
+                                    <div class="card">
+                                        <img src="images/Watts DP Light Solar Flood Light.jpg" class="card-img-top" alt="Watts DP Light Solar Flood Light">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Watts DP Light Solar Flood Light</h5>
+                                            <p class="card-text">Powerful solar floodlight ideal for large outdoor spaces.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Europe Modern Loft Hanging Black Amber Color Glass Pendant Lamp Fixtures E27 Led Pendant Lights Kitchen Restaurant Bar Living Room Bedroom.jpg" class="card-img-top" alt="Modern Loft Pendant Lamp">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Modern Loft Hanging Lamp</h5>
+                                        <p class="card-text">Stylish black and amber pendant lamp ideal for kitchens and dining areas.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Glass Globe Chandelier- Light Black 6 Light.jpg" class="card-img-top" alt="Glass Globe Chandelier">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Glass Globe Chandelier</h5>
+                                        <p class="card-text">Elegant black chandelier with six glass globes for a modern touch.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Gold Glass Ball with Ring Frame Pendant Light.jpg" class="card-img-top" alt="Gold Glass Pendant Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Gold Glass Pendant Light</h5>
+                                        <p class="card-text">Chic pendant light featuring a gold glass ball design, perfect for stylish interiors.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Halliburton 4 - Light Kitchen Island Unique Design Modern Light.png" class="card-img-top" alt="Kitchen Island Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Kitchen Island Light</h5>
+                                        <p class="card-text">Unique four-light fixture designed to illuminate kitchen islands.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Linear LED Island Chandelier, Dining Room Hanging Lighting Fixtures, Kitchen Island Billiard Room Office Bar Hanging Light 100m,Black).jpg" class="card-img-top" alt="Linear LED Chandelier">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Linear LED Chandelier</h5>
+                                        <p class="card-text">Sleek LED chandelier for dining rooms and bars, offering adjustable lighting.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Magnus Black with White Pendant Light Kit.jpg" class="card-img-top" alt="Magnus Black Pendant Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Magnus Black Pendant Light</h5>
+                                        <p class="card-text">Versatile pendant light kit featuring a stylish black and white design.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Modern Industrial Style Pendant Light Fixtures Crystal Glass Ceiling Hanging Light Kitchen Island Chandelier.jpg" class="card-img-top" alt="Industrial Style Pendant Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Industrial Style Pendant Light</h5>
+                                        <p class="card-text">Crystal glass hanging light with an industrial flair for kitchen islands.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Modern LED Pendant Light Fixture In Contemporary White LED Chandelier.jpg" class="card-img-top" alt="Contemporary White LED Chandelier">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Contemporary White LED Chandelier</h5>
+                                        <p class="card-text">Sleek white LED chandelier designed for modern interiors.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/New Modern Crystal Round Indoor Light Fixture Gold White Black Color.jpg" class="card-img-top" alt="Crystal Round Indoor Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Crystal Round Indoor Light</h5>
+                                        <p class="card-text">Stylish round fixture featuring crystal elements in gold, white, and black.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Nordic Led 12W Pendant Lights Long Tube Chandelier Adjustable Height Cylinder Droplight Anti-Glare Spotlight.jpg" class="card-img-top" alt="Nordic LED Pendant Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Nordic LED Pendant Light</h5>
+                                        <p class="card-text">Adjustable height long tube chandelier with anti-glare spotlight features.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Nordic Style Black Sputnik 6bulb Chandelier Light.jpg" class="card-img-top" alt="Sputnik Chandelier">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sputnik Chandelier</h5>
+                                        <p class="card-text">Stylish six-bulb chandelier with a Nordic design, perfect for modern spaces.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Retractable Chandelier Ceiling Fan 6 Speed Black Fandelier Ceiling Fan Light.jpg" class="card-img-top" alt="Retractable Ceiling Fan Chandelier">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Retractable Ceiling Fan Chandelier</h5>
+                                        <p class="card-text">Innovative chandelier with a retractable design and six-speed fan functionality.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Retro Style Jute Rope Hemp Round Chandelier 6 Heads Pendant Hanging - sland Fixture Ceiling Lamp.jpg" class="card-img-top" alt="Retro Jute Rope Chandelier">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Retro Jute Rope Chandelier</h5>
+                                        <p class="card-text">Unique round chandelier made with jute rope for a rustic look.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Scandinavian minimalist dining room three head pendant chandelier light.png" class="card-img-top" alt="Minimalist Pendant Chandelier">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Minimalist Pendant Chandelier</h5>
+                                        <p class="card-text">Three-head pendant chandelier designed for minimalist dining rooms.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Simple Hat Center Light.jpg" class="card-img-top" alt="Simple Hat Center Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Simple Hat Center Light</h5>
+                                        <p class="card-text">Sleek and simple center light fixture for versatile applications.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Suspension Light Fixture Acrylic Lampshade Adjustable Pendant Light Modern Metal Chandelier Lighting.jpg" class="card-img-top" alt="Acrylic Lampshade Pendant Light">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Acrylic Lampshade Pendant Light</h5>
+                                        <p class="card-text">Modern pendant light with an adjustable acrylic lampshade design.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6 mb-4">
+                                <div class="card">
+                                    <img src="images/Wicker Hanging Lamp Bamboo Pendant Light.jpg" class="card-img-top" alt="Wicker Hanging Lamp">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Wicker Hanging Lamp</h5>
+                                        <p class="card-text">Beautiful bamboo pendant light that adds warmth to any space.</p>
+                                    </div>
+                                </div>
+                            </div>                             
+                 </div>
+            </div>
+        </section>
+
+     <!-- Portfolio - Shower lights section-->
+      <section id="showers-section" style="display: none;">
+        <div class="container my-5">
+            <h2 class="text-center mb-4" style="color: #e67e22;">Showers Lights</h2>
+            <p class="text-center mb-5">Explore our range of showers lights available in our merchandise</p>
+
+                    <!-- Product Display Section -->
+                    <div class="row" id="ShowerslightsProducts">
+
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Anlabeier 8000w multi point tankless instant heater.jpg" class="card-img-top" alt="Anlabeier 8000w Multi Point Tankless Instant Heater">
+                                <div class="card-body">
+                                    <h5 class="card-title">Anlabeier 8000w Multi Point Tankless Instant Heater</h5>
+                                    <p class="card-text">Efficient and compact tankless water heater for instant hot water.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Horizon instant shower.jpg" class="card-img-top" alt="Horizon Instant Shower">
+                                <div class="card-body">
+                                    <h5 class="card-title">Horizon Instant Shower</h5>
+                                    <p class="card-text">Convenient instant shower solution for immediate hot water access.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Horizon white instant shower. Most Affordable Instant Hot Shower.jpg" class="card-img-top" alt="Affordable White Instant Hot Shower">
+                                <div class="card-body">
+                                    <h5 class="card-title">Affordable White Instant Hot Shower</h5>
+                                    <p class="card-text">Budget-friendly instant hot shower for quick and easy installation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/200 Watt Neelux Solar Street Light.jpg" class="card-img-top" alt="200 Watt Neelux Solar Street Light">
+                                <div class="card-body">
+                                    <h5 class="card-title">200 Watt Neelux Solar Street Light</h5>
+                                    <p class="card-text">High-performance solar street light for enhanced nighttime visibility.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Lorenzetti Acqua storm ultra instant shower.jpg" class="card-img-top" alt="Lorenzetti Acqua Storm Ultra Instant Shower">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorenzetti Acqua Storm Ultra Instant Shower</h5>
+                                    <p class="card-text">Powerful instant shower with temperature control for comfort.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Lorenzetti aqua star instant shower.jpg" class="card-img-top" alt="Lorenzetti Aqua Star Instant Shower">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorenzetti Aqua Star Instant Shower</h5>
+                                    <p class="card-text">Efficient instant shower featuring a modern design and easy installation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Lorenzetti Bella Ducha 4T instant hot shower.jpg" class="card-img-top" alt="Lorenzetti Bella Ducha 4T Instant Hot Shower">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorenzetti Bella Ducha 4T Instant Hot Shower</h5>
+                                    <p class="card-text">Elegant instant hot shower that combines style with functionality.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Lorenzetti Ducha Relax Shower Head.jpeg" class="card-img-top" alt="Lorenzetti Ducha Relax Shower Head">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorenzetti Ducha Relax Shower Head</h5>
+                                    <p class="card-text">Shower head designed for ultimate relaxation and water efficiency.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Lorenzetti Duo instant shower.jpg" class="card-img-top" alt="Lorenzetti Duo Instant Shower">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorenzetti Duo Instant Shower</h5>
+                                    <p class="card-text">Stylish instant shower unit with dual temperature settings.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Lorenzetti Duo Quadra shower.jpg" class="card-img-top" alt="Lorenzetti Duo Quadra Shower">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorenzetti Duo Quadra Shower</h5>
+                                    <p class="card-text">Advanced instant shower with quad settings for optimal comfort.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Lorenzetti Loren Bello Ultra instant shower grey color.jpg" class="card-img-top" alt="Lorenzetti Loren Bello Ultra Instant Shower Grey">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorenzetti Loren Bello Ultra Instant Shower Grey</h5>
+                                    <p class="card-text">Modern instant shower featuring a sleek grey finish for contemporary bathrooms.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3 col-6 mb-4">
+                            <div class="card">
+                                <img src="images/Lorenzetti Loren Bello Ultra instant shower Whitecolor.jpg" class="card-img-top" alt="Lorenzetti Loren Bello Ultra Instant Shower White">
+                                <div class="card-body">
+                                    <h5 class="card-title">Lorenzetti Loren Bello Ultra Instant Shower White</h5>
+                                    <p class="card-text">Chic instant shower in white, perfect for stylish bathroom designs.</p>
                                 </div>
                             </div>
                         </div>                        
-
-                    </div>
-
+                        
+             </div>
         </div>
     </section>
     

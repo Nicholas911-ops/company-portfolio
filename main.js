@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
+    
     function loadContent(page) {
         let content = '';  // Variable to hold the section ID based on the page
-
+    
         // Identify the corresponding section based on the clicked nav item
         switch (page) {
             case 'home':
@@ -16,9 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
             case 'faqs':
                 content = 'faqs-section';
                 break;
-            case 'lighting-accessories':
-                content = 'lighting-accessories-section';
-                break;
             case 'meter-boxes':
                 content = 'meter-boxes-section';
                 break;
@@ -27,6 +25,24 @@ document.addEventListener("DOMContentLoaded", function() {
                 break;
             case 'cables':
                 content = 'cables-section'; // Added cables section
+                break;
+            case 'chandeliers':
+                content = 'chandeliers-section'; // Added chandeliers section
+                break;
+            case 'floodlights':
+                content = 'floodlights-section'; // Added floodlights section
+                break;
+            case 'led-panel-lights':
+                content = 'led-panel-lights-section'; // Added LED panel lights section
+                break;
+            case 'moon-lights':
+                content = 'moon-lights-section'; // Added moon lights section
+                break;
+            case 'pendant-lights':
+                content = 'pendant-lights-section'; // Added pendant lights section
+                break;
+            case 'showers':
+                content = 'showers-section'; // Added showers section
                 break;
             case 'conduit-and-fittings':
                 content = 'conduit-and-fittings-section'; // Added conduit and fittings section
@@ -93,11 +109,35 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Add event listener for the "Get Started" button
-    getStartedBtn.addEventListener('click', function(event) {
-        event.preventDefault();  // Prevent default anchor behavior
-        loadPageContent('home');  // Load the "home" page content
-    });
+        // Event listener for "Get Started" button
+        const getStartedBtn = document.getElementById('get-started-btn');
+
+        if (getStartedBtn) {
+            getStartedBtn.addEventListener('click', function (event) {
+                event.preventDefault();  // Prevent default anchor behavior
+                loadContent('home');  // Load the "home" content
+            });
+        }
+
+        // Use event delegation to handle clicks on dynamically generated buttons
+        document.addEventListener('click', function(event) {
+            if (event.target && event.target.id === ' viewMoreFabricationsBtn') {
+                event.preventDefault();  // Prevent default anchor behavior
+                
+                // Load "Sockets & Switches" content
+                loadContent('meter-boxes');  // Load the corresponding page content into #contentContainer
+            }
+           
+            if (event.target && event.target.id === 'viewMoreCookerSocketsBtn') {
+                event.preventDefault();  // Prevent default anchor behavior
+                
+                // Load "Meter Boxes" content
+                loadContent('sockets-switches');  // Load the corresponding page content into #contentContainer
+            }
+        });
+
+ 
+
 
     // Swiper initialization
     var swiper = new Swiper('.testimonials-slider', {
@@ -175,32 +215,6 @@ document.addEventListener("DOMContentLoaded", function() {
     ]
 };
 
-// Example data for Conduit & Fittings subcategories
-const conduitSubcategoryProducts = {
-    'View-More': [
-        {
-            name: '20mm Conduit Everest ',
-            description: 'A 20mm conduit pipe , providing superior strength and electrical insulation, ideal for long-lasting installations.',
-            image: 'images/20mm Conduit Everest.jpg',
-        },
-        {
-            name: '25mm Conduit Everest ',
-            description: 'A durable 25mm  conduit for enhanced protection and easy installation in commercial or residential buildings.',
-            image: 'images/25 mm Conduit Everest.jpg',
-        },
-        {
-            name: '32mm Conduit Everest ',
-            description: '32mm conduit  for secure and robust wiring systems, ensuring seamless and protective connections.',
-            image: 'images/32 Conduit Everest.jpg',
-        },
-        {
-            name: '50mm Conduit Everest ',
-            description: 'A heavy-duty 50mm conduit for large-scale installations, designed for smooth and efficient directional conduit setups.',
-            image: 'images/50mm Conduit Everest.jpg',
-        }
-    ],
-
-};
 
  // Separate display functions for each product type
  function displayLightingProducts(subcategory) {
@@ -217,24 +231,10 @@ const conduitSubcategoryProducts = {
     }
 }
 
-function displayConduitProducts(subcategory) {
-    const productContainer = document.getElementById('conduitProducts');
-    productContainer.innerHTML = '';
-    const products = conduitProducts[subcategory];
-    if (products) {
-        products.forEach(product => {
-            const productCard = `<div class="col-md-4 mb-4"><div class="card"><img src="${product.image}" alt="${product.name}" class="card-img-top"><div class="card-body"><h5 class="card-title">${product.name}</h5><p class="card-text">${product.description}</p></div></div></div>`;
-            productContainer.innerHTML += productCard;
-        });
-    } else {
-        productContainer.innerHTML = '<p>No products found for this subcategory.</p>';
-    }
-}
 
 // Proper window load handling
 window.onload = function() {
     displayLightingProducts('full-moon-lights');
-    displayConduitProducts('View-More');
 };
 
 });
