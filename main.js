@@ -130,7 +130,39 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();  // Prevent default anchor behavior
             loadContent('sockets-switches');  // Load the corresponding page content into #contentContainer
         }
+
+        if (event.target && event.target.id === 'viewMoreFullMoonlightsBtn') { // Ensure ID is correct
+            event.preventDefault();  // Prevent default anchor behavior
+            loadContent('moon-lights');  // Load the corresponding page content into #contentContainer
+        }
+
+        if (event.target && event.target.id === 'viewMoreWallBracketsBtn') { // Ensure ID is correct
+            event.preventDefault();  // Prevent default anchor behavior
+            loadContent('chandeliers');  // Load the corresponding page content into #contentContainer
+        }
+
+        if (event.target && event.target.id === 'viewMoreChangeoverSwitchessBtn') { // Ensure ID is correct
+            event.preventDefault();  // Prevent default anchor behavior
+            loadContent('sockets-switches');  // Load the corresponding page content into #contentContainer
+        }
+
+        if (event.target && event.target.id === 'viewFloodlightsBtn') { // Ensure ID is correct
+            event.preventDefault();  // Prevent default anchor behavior
+            loadContent('floodlights');  // Load the corresponding page content into #contentContainer
+        }
+
+        if (event.target && event.target.id === 'viewMorePanelLightsBtn') { // Ensure ID is correct
+            event.preventDefault();  // Prevent default anchor behavior
+            loadContent('led-panel-lights');  // Load the corresponding page content into #contentContainer
+        }
+
+        if (event.target && event.target.id === 'viewMoreCablesBtn') { // Ensure ID is correct
+            event.preventDefault();  // Prevent default anchor behavior
+            loadContent('cables');  // Load the corresponding page content into #contentContainer
+        }
+
     });
+
 
     // Swiper initialization
     var swiper = new Swiper('.testimonials-slider', {
