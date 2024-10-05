@@ -109,35 +109,28 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-        // Event listener for "Get Started" button
-        const getStartedBtn = document.getElementById('get-started-btn');
+    // Event listener for "Get Started" button
+    const getStartedBtn = document.getElementById('get-started-btn');
 
-        if (getStartedBtn) {
-            getStartedBtn.addEventListener('click', function (event) {
-                event.preventDefault();  // Prevent default anchor behavior
-                loadContent('home');  // Load the "home" content
-            });
-        }
-
-        // Use event delegation to handle clicks on dynamically generated buttons
-        document.addEventListener('click', function(event) {
-            if (event.target && event.target.id === ' viewMoreFabricationsBtn') {
-                event.preventDefault();  // Prevent default anchor behavior
-                
-                // Load "Sockets & Switches" content
-                loadContent('meter-boxes');  // Load the corresponding page content into #contentContainer
-            }
-           
-            if (event.target && event.target.id === 'viewMoreCookerSocketsBtn') {
-                event.preventDefault();  // Prevent default anchor behavior
-                
-                // Load "Meter Boxes" content
-                loadContent('sockets-switches');  // Load the corresponding page content into #contentContainer
-            }
+    if (getStartedBtn) {
+        getStartedBtn.addEventListener('click', function (event) {
+            event.preventDefault();  // Prevent default anchor behavior
+            loadContent('home');  // Load the "home" content
         });
+    }
 
- 
-
+    // Use event delegation to handle clicks on dynamically generated buttons
+    document.addEventListener('click', function(event) {
+        if (event.target && event.target.id === 'viewMoreFabricationsBtn') { // Removed space
+            event.preventDefault();  // Prevent default anchor behavior
+            loadContent('meter-boxes');  // Load the corresponding page content into #contentContainer
+        }
+       
+        if (event.target && event.target.id === 'viewMoreCookerSocketsBtn') { // Ensure ID is correct
+            event.preventDefault();  // Prevent default anchor behavior
+            loadContent('sockets-switches');  // Load the corresponding page content into #contentContainer
+        }
+    });
 
     // Swiper initialization
     var swiper = new Swiper('.testimonials-slider', {
@@ -153,88 +146,4 @@ document.addEventListener("DOMContentLoaded", function() {
         slidesPerView: 1,  // One testimonial at a time
         spaceBetween: 20,  // Space between slides
     });
-
-    // Example data for each subcategory
-    const lightingProducts = {
-        'full-moon-lights': [
-        {
-            name: 'Full Moon Light',
-            description: 'A stylish, energy-efficient LED light designed to enhance modern interior spaces.',
-            image: 'images/fullmoonlights.jpg',
-        },
-        {
-            name: 'Small Full Moon',
-            description: 'Compact and efficient LED for smaller spaces, offering balanced and soft lighting.',
-            image: 'images/smallfullmoon.jpg',
-        },
-        {
-            name: 'Optonica 72W',
-            description: 'High-power 72W LED, ideal for large rooms needing bright, expansive illumination.',
-            image: 'images/SQUARE CEILING LIGHT WHITE (1).png',
-        },
-        {
-            name: 'No.9 Full Moon',
-            description: 'Sleek and minimalistic LED light, perfect for modern homes requiring bright, uniform lighting.',
-            image: 'images/no.9fullmoon.png',
-        },
-        {
-            name: 'Optonica Full Moon',
-            description: 'An energy-saving full moon LED with a stylish design, great for both home and office spaces.',
-            image: 'images/Optonicafullmoon.jpg',
-        },
-        {
-            name: 'Half Moon',
-            description: 'A half-circle LED that offers soft ambient lighting, perfect for hallways or mood lighting.',
-            image: 'images/Halfmoon.jpg',
-        }
-    ],
-
-    'wall-brackets': [
-        {
-            name: 'Modern Wall Bracket',
-            description: 'Stylish modern design for living room walls.',
-            image: 'images/wallbracket1.jpg',
-        },
-        {
-            name: 'Antique Wall Bracket',
-            description: 'Elegant antique design for home decoration.',
-            image: 'images/wallbracket2.jpg',
-        }
-    ],
-    'surface-panels': [
-        {
-            name: 'Slim Surface Panel',
-            description: 'Ultra-slim panel for stylish ceilings.',
-            image: 'images/surfacepanel1.jpg',
-        },
-        {
-            name: 'Square Surface Panel',
-            description: 'Bright square panel for kitchens and offices.',
-            image: 'images/surfacepanel2.jpg',
-        }
-    ]
-};
-
-
- // Separate display functions for each product type
- function displayLightingProducts(subcategory) {
-    const productContainer = document.getElementById('lightingProducts');
-    productContainer.innerHTML = '';
-    const products = lightingProducts[subcategory];
-    if (products) {
-        products.forEach(product => {
-            const productCard = `<div class="col-md-4 mb-4"><div class="card"><img src="${product.image}" alt="${product.name}" class="card-img-top"><div class="card-body"><h5 class="card-title">${product.name}</h5><p class="card-text">${product.description}</p></div></div></div>`;
-            productContainer.innerHTML += productCard;
-        });
-    } else {
-        productContainer.innerHTML = '<p>No products found for this subcategory.</p>';
-    }
-}
-
-
-// Proper window load handling
-window.onload = function() {
-    displayLightingProducts('full-moon-lights');
-};
-
 });
