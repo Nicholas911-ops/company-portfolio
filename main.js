@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     
     function loadContent(page) {
@@ -12,8 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 content = 'about-section';
                 break;
             case 'testimonials':
-                content = document.getElementById('testimonials-section').innerHTML;
-                initializeSwiper(); // Initialize Swiper only for testimonials
+                content = document.getElementById('testimonials-section'); 
                 break;
             case 'faqs':
                 content = 'faqs-section';
@@ -167,10 +167,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
-// Function to initialize Swiper
-function initializeSwiper() {
+
     // Initialize Swiper for the testimonials slider
-    const swiper = new Swiper('.testimonials-slider', {
+    const swiper = new Swiper('.testimonials-slider.swiper', {
+        effect: 'coverflow',
+        centeredSlides: true,
         loop: true,
         slidesPerView: 1,
         spaceBetween: 30,
@@ -187,6 +188,5 @@ function initializeSwiper() {
             prevEl: '.swiper-button-prev',
         },
     });
-}
 
 });
