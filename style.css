@@ -583,8 +583,9 @@ footer .social-icons a:hover {
 
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
-    .col-6 {
+    .col-md-4 {
         padding: 0.5rem; /* Add padding between cards */
+        margin-bottom: 10px;
     }
 
     .card {
