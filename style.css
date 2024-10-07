@@ -421,10 +421,12 @@ header {
     color: #777;
 }
 
-.swiper-button-next, .swiper-button-prev {
-    color: #1e12bd;
-    width: 40px;
-    height: 40px;
+/* Hide Swiper navigation buttons on mobile devices */
+@media (max-width: 768px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none; /* Hide the buttons */
+    }
 }
 
 .swiper-button-next::after, .swiper-button-prev::after {
