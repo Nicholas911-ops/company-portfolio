@@ -168,17 +168,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     // Swiper initialization
-    var swiper = new Swiper('.testimonials-slider', {
-        loop: true,  // Loop through slides
+    const swiper = new Swiper('.testimonials-slider', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 9000,
+            disableOnInteraction: false,
+        },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
-        autoplay: {
-            delay: 5000,  // Auto-slide every 5 seconds
-            disableOnInteraction: false,  // Continue autoplay after interaction
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
-        slidesPerView: 1,  // One testimonial at a time
-        spaceBetween: 20,  // Space between slides
     });
 });
