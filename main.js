@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function() {
             case 'chandeliers':
                 content = 'chandeliers-section'; // Added chandeliers section
                 break;
-            case 'floodlights':
-                content = 'floodlights-section'; // Added floodlights section
+            case 'solarlights':
+                content = 'solarlights-section'; // Added floodlights section
                 break;
             case 'wallbrackets':
                 content = 'wallbrackets-section'; // Added wallbrackets section
@@ -150,9 +150,9 @@ document.addEventListener("DOMContentLoaded", function() {
             loadContent('sockets-switches');  // Load the corresponding page content into #contentContainer
         }
 
-        if (event.target && event.target.id === 'viewFloodlightsBtn') { // Ensure ID is correct
+        if (event.target && event.target.id === 'viewSolarlightsBtn') { // Ensure ID is correct
             event.preventDefault();  // Prevent default anchor behavior
-            loadContent('floodlights');  // Load the corresponding page content into #contentContainer
+            loadContent('solarlights');  // Load the corresponding page content into #contentContainer
         }
 
         if (event.target && event.target.id === 'viewMorePanelLightsBtn') { // Ensure ID is correct
