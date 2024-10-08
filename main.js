@@ -1,9 +1,7 @@
-
-document.addEventListener("DOMContentLoaded", function() {
-    
+document.addEventListener("DOMContentLoaded", function () {
     function loadContent(page) {
         let content = '';  // Variable to hold the section ID based on the page
-    
+
         // Identify the corresponding section based on the clicked nav item
         switch (page) {
             case 'home':
@@ -13,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 content = 'about-section';
                 break;
             case 'testimonials':
-                content = document.getElementById('testimonials-section'); 
+                content = 'testimonials-section'; 
                 break;
             case 'faqs':
                 content = 'faqs-section';
@@ -31,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 content = 'chandeliers-section'; // Added chandeliers section
                 break;
             case 'solarlights':
-                content = 'solarlights-section'; // Added floodlights section
+                content = 'solarlights-section'; // Added solar lights section
                 break;
             case 'wallbrackets':
-                content = 'wallbrackets-section'; // Added wallbrackets section
+                content = 'wallbrackets-section'; // Added wall brackets section
                 break;
             case 'led-panel-lights':
                 content = 'led-panel-lights-section'; // Added LED panel lights section
@@ -69,12 +67,35 @@ document.addEventListener("DOMContentLoaded", function() {
             const clonedSection = section.cloneNode(true);
             clonedSection.style.display = 'block';  // Ensure the cloned section is displayed
             container.appendChild(clonedSection);  // Append the cloned section to the content container
+
+            // Initialize Swiper for testimonials section if it's loaded
+            if (page === 'testimonials') {
+                const swiper = new Swiper('.testimonials-slider.swiper', {
+                    effect: 'coverflow',
+                    centeredSlides: true,
+                    loop: true,
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    autoplay: {
+                        delay: 9000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            }
         }
     }
 
     // Add click event listeners to each nav-link to load the corresponding content
     document.querySelectorAll(".nav-link").forEach(item => {
-        item.addEventListener("click", function(event) {
+        item.addEventListener("click", function (event) {
             event.preventDefault();  // Prevent the default anchor behavior
 
             const page = this.getAttribute("data-page");  // Get the page attribute from the clicked nav item
@@ -84,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Use event delegation for dropdown items
     document.querySelectorAll('.dropdown-menu').forEach(menu => {
-        menu.addEventListener('click', function(event) {
+        menu.addEventListener('click', function (event) {
             const item = event.target.closest('.dropdown-item'); // Find the clicked dropdown item
             if (item) {
                 event.preventDefault(); // Prevent the default action
@@ -124,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Use event delegation to handle clicks on dynamically generated buttons
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
         if (event.target && event.target.id === 'viewMoreFabricationsBtn') { // Removed space
             event.preventDefault();  // Prevent default anchor behavior
             loadContent('meter-boxes');  // Load the corresponding page content into #contentContainer
@@ -164,29 +185,5 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();  // Prevent default anchor behavior
             loadContent('cables');  // Load the corresponding page content into #contentContainer
         }
-
     });
-
-
-    // Initialize Swiper for the testimonials slider
-    const swiper = new Swiper('.testimonials-slider.swiper', {
-        effect: 'coverflow',
-        centeredSlides: true,
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
-        autoplay: {
-            delay: 9000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-
 });
