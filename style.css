@@ -742,8 +742,8 @@ color: #e67e22;
 .card-img-top {
     object-fit: cover; /* Ensure image covers the card properly */
     width: 100%; /* Full width inside the card */
-    height: 150px; /* Let the height adjust automatically */
-    max-height: 150pxpx; /* Limit max height of the image to prevent oversized images */
+    height: 200px; /* Let the height adjust automatically */
+    max-height: 200px; /* Limit max height of the image to prevent oversized images */
     border-radius: 10px 10px 0 0; /* Round the image corners to match the card */
 }
 
