@@ -481,6 +481,27 @@ header {
     }
 }
 
+.contact-container {
+    background-color: white; /* White background for the container */
+    padding: 20px; /* Padding around the container */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+.button-group .btn {
+    flex: 1 0 45%; /* Allow buttons to grow to 45% width */
+    max-width: 120px; /* Set a max width for buttons */
+    margin: 5px; /* Spacing between buttons */
+    font-size: 1.2rem; /* Font size for icons */
+    text-align: center; /* Center the icons */
+}
+
+@media (max-width: 768px) {
+    .button-group .btn {
+        flex: 1 0 48%; /* Adjust to fit 2 buttons per row */
+        max-width: 48%; /* Max width to ensure two buttons fit */
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+}
 
 /* Testimonials section */
 .testimonial-item {
@@ -514,6 +535,11 @@ header {
 .testimonial-meta p {
     font-size: 14px;
     color: #777;
+}
+.quote-icon {
+    font-size: 2em; /* Adjust size as needed */
+    color: #0a4fe4; /* Color of the quotation mark */
+    position: relative; /* Position relative for alignment */
 }
 
 /* Hide Swiper navigation buttons on mobile devices */
