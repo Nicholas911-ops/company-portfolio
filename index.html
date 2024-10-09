@@ -23,7 +23,6 @@
         <link rel="stylesheet" href="style.css">
     </head>
     
-    
 <body>
     <!-- Header -->
     <header> 
@@ -33,43 +32,57 @@
                     <img src="images/favicon.png" alt="Migua Lights & Electricals Logo">
                     <h4> Migua Lights & Electricals </h4>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars text-white"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fas fa-bars text-white"></i>
+                  </button>
+                  
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <img src="images/favicon.png" alt="Migua Lights & Electricals Logo" class="logo-img">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Migua Lights & Electricals</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="#" data-page="home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#" data-page="about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#" data-page="testimonials">Testimonials</a></li>
                         <li class="nav-item"><a class="nav-link" href="#" data-page="faqs">FAQs</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
-                            <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
-                                <li><a class="dropdown-item" href="#" data-page="cables">Cables</a></li> 
-                                <li><a class="dropdown-item" href="#" data-page="chandeliers">Chandeliers</a></li>
-                                <li><a class="dropdown-item" href="#" data-page="solarlights">Solarlights</a></li>
-                                <li><a class="dropdown-item" href="#" data-page="wallbrackets">Wall Brackets</a></li>
-                                <li><a class="dropdown-item" href="#" data-page="led-panel-lights">LED Panel Lights</a></li>
-                                <li><a class="dropdown-item" href="#" data-page="moon-lights">Moon Lights</a></li>
-                                <li><a class="dropdown-item" href="#" data-page="pendant-lights">Pendant Lights</a></li>
-                                <li><a class="dropdown-item" href="#" data-page="showers">Showers</a></li>
-                                <li><a class="dropdown-item" href="#" data-page="meter-boxes">Meter Boxes/Other Fabrications</a></li>
-                                <li><a class="dropdown-item" href="#" data-page="conduit-and-fittings">Conduit & Fittings</a></li>
-                                <li><a class="dropdown-item" href="#" data-page="sockets-switches">Sockets & Switches</a></li>
-                                <li><a class="dropdown-item" href="#" data-page="padlocks">Padlocks</a></li>
-                            </ul>
-                        </li>                                          
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="letsTalkDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Customer Support</a>
-                            <ul class="dropdown-menu" aria-labelledby="letsTalkDropdown">
-                                <li><a class="dropdown-item phone-link" href="tel:+254113393877">Call Us</a></li>
-                                <li><a class="dropdown-item whatsapp-link" href="https://wa.me/+254113393877" target="_blank">WhatsApp</a></li>
-                                <li><a class="dropdown-item email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=homelightkeltd@gmail.com" target="_blank">Email Us</a></li>
-                            </ul>
+                          <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+                            <li><a class="dropdown-item" href="#cables">Cables</a></li>
+                            <li><a class="dropdown-item" href="#chandeliers">Chandeliers</a></li>
+                            <!-- Add more items as needed -->
+                            <li><a class="dropdown-item" href="#" data-page="solarlights">Solarlights</a></li>
+                            <li><a class="dropdown-item" href="#" data-page="wallbrackets">Wall Brackets</a></li>
+                            <li><a class="dropdown-item" href="#" data-page="led-panel-lights">LED Panel Lights</a></li>
+                            <li><a class="dropdown-item" href="#" data-page="moon-lights">Moon Lights</a></li>
+                            <li><a class="dropdown-item" href="#" data-page="pendant-lights">Pendant Lights</a></li>
+                            <li><a class="dropdown-item" href="#" data-page="showers">Showers</a></li>
+                            <li><a class="dropdown-item" href="#" data-page="meter-boxes"> Fabrications</a></li>
+                            <li><a class="dropdown-item" href="#" data-page="conduit-and-fittings">Conduit & Fittings</a></li>
+                            <li><a class="dropdown-item" href="#" data-page="sockets-switches">Sockets & Switches</a></li>
+                            <li><a class="dropdown-item" href="#" data-page="padlocks">Padlocks</a></li>
+                          </ul>
                         </li>
-                    </ul>
-
-                </div>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="letsTalkDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Customer Support
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="letsTalkDropdown">
+                            <li><a class="dropdown-item phone-link" href="tel:+254113393877">Call Us</a></li>
+                            <li><a class="dropdown-item whatsapp-link" href="https://wa.me/+254113393877" target="_blank">WhatsApp</a></li>
+                            <li><a class="dropdown-item email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=homelightkeltd@gmail.com" target="_blank">Email Us</a></li>
+                        </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  
             </div>
         </nav>
     </header>
@@ -2808,19 +2821,20 @@
     </div>
 </section>
 
-
 <a href="https://wa.me/+254113393877" target="_blank" class="whatsapp-icon">
     <i class="fa-brands fa-whatsapp"></i>
+    <span class="tooltip-text">Chat with us on WhatsApp</span>
 </a>
 
     <!-- Footer Section -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <div class="mb-3">
-                <a href="#home" class="text-white">Home</a> 
-                <a href="#about" class="text-white">About Us</a> 
-                <a href="#contact" class="text-white">Testimonials</a> 
-                <a href="#faqs" class="text-white">FAQs</a> 
+
+                <a href="#" class="text-white" data-page="home">Home</a>
+                <a href="#" class="text-white" data-page="about">About Us</a>
+                <a href="#" class="text-white" data-page="testimonials">Testimonials</a>
+                <a href="#" class="text-white" data-page="faqs">FAQs</a>
 
             </div>
             <div class="mb-3">

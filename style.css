@@ -69,7 +69,7 @@ header {
 }
 /* Style to show active nav item link as hovered */
 .navbar-nav .nav-link.active {
-    background-color: #b1166b;
+    background-color: #007bff;
     color: white;
     border-radius: 5px;
 }
@@ -78,6 +78,83 @@ header {
     color: white;
     border-radius: 5px;
 }
+
+
+/* Set the off-canvas menu width to 75% */
+.offcanvas {
+    width: 75% !important;
+    background-color: #0a0a0a; /* Background color for the menu */
+  }
+  
+  /* Customize the off-canvas header */
+  .offcanvas-header {
+    background-color: #343a40; /* Dark header */
+    color: white;
+  }
+  
+/* Styling for the logo image */
+.logo-img {
+    width: 40px; /* Adjust the logo size */
+    height: auto;
+    margin-right: 10px; /* Space between the logo and the title */
+  }
+  
+  /* Customize the font size of the title */
+  .offcanvas-title {
+    font-size: 1.1rem; /* Adjust as needed */
+    font-weight: bold;
+    color: white;
+  }
+  
+  .btn-close {
+    filter: invert(100%); /* Make the close button white */
+  }
+  
+  /* Dropdown styling */
+  .offcanvas-body .dropdown-menu {
+    background-color: #3f4142;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .offcanvas-body .dropdown-item {
+    color: #f6f6f8;
+    padding: 0.5rem 1rem;
+  }
+  
+  .offcanvas-body .dropdown-item:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Customize the appearance of dropdowns */
+  .nav-item .dropdown-toggle::after {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-item .dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+  }
+  
+  /* Add custom padding inside the off-canvas */
+  .offcanvas-body {
+    padding: 2rem;
+  }
+  
+  /* Style for different screen sizes */
+  @media (max-width: 768px) {
+    .offcanvas {
+      width: 75% !important; /* Adjusted for mobile */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .offcanvas {
+      width: 400px; /* Fixed width for larger screens */
+    }
+  }
+  
 
 /* welcome page video animation css*/
 /* Video Background */
@@ -479,29 +556,29 @@ header {
 /* Let's Talk Dropdown Styles */
 .phone-link {
     color: #fff;
-    background-color: #28a745; /* Matches WhatsApp green */
+
 }
 
 .phone-link:hover {
-    background-color: #218838; /* Darker green on hover */
+    background-color: #218838 !important; /* Darker green on hover */
 }
 
 .whatsapp-link {
     color: #fff;
-    background-color: #25D366; /* WhatsApp color */
+  
 }
 
 .whatsapp-link:hover {
-    background-color: #1EBE53; /* Darker WhatsApp color on hover */
+    background-color: #1EBE53 !important; /* Darker WhatsApp color on hover */
 }
 
 .email-link {
     color: #fff;
-    background-color: #D44638; /* Gmail red */
+
 }
 
 .email-link:hover {
-    background-color: #B33627; /* Darker Gmail red on hover */
+    background-color: #B33627 !important; /* Darker Gmail red on hover */
 }
 
         .landmark-image {
@@ -540,6 +617,31 @@ header {
         z-index: 1000;
         text-decoration: none; /* Ensure no underline */
     }
+    
+    .whatsapp-icon .tooltip-text {
+        visibility: hidden;
+        width: 220px;
+        background-color: #54fc06;
+        color: #0a0a0a;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        bottom: 50%; /* Aligns vertically with the middle of the icon */
+        right: 130%; /* Moves the tooltip to the left of the icon */
+        transform: translateY(50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 1rem;
+        white-space: nowrap; /* Prevents text from wrapping */
+    }
+    
+    /* Show the tooltip when hovering */
+    .whatsapp-icon:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+    
     
     .whatsapp-icon i {
         font-size: 50px; /* Default size for larger screens */
