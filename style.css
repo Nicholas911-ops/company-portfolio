@@ -7,9 +7,27 @@ body {
 
 /* Header */
 header {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     width:auto
 }
+/* Navbar Brand Styles */
+.navbar-brand {
+    display: flex; /* Ensures logo and title are aligned */
+    align-items: center; /* Vertically centers items */
+    margin-left: -40px; /* Pushes the entire logo/title left */
+}
+
+.navbar-logo {
+    width: 100px; /* Increase the width of the favicon */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional: Increase the font size of the title */
+.navbar-brand h4 {
+    font-size: 1.5rem; /* Adjust as needed for your design */
+    margin: 0; /* Remove default margin */
+}
+
 
 /* Responsive behavior for smaller screens */
 @media (max-width: 768px) {
@@ -37,7 +55,7 @@ header {
 }
 
 .navbar {
-    padding: 1rem 0;
+    padding: 0.7rem 0;
 }
 
 .navbar-brand img {
@@ -94,9 +112,9 @@ header {
   
 /* Styling for the logo image */
 .logo-img {
-    width: 40px; /* Adjust the logo size */
+    width: 80px; /* Adjust the logo size */
     height: auto;
-    margin-right: 10px; /* Space between the logo and the title */
+    margin-right: 5px; /* Space between the logo and the title */
   }
   
   /* Customize the font size of the title */
@@ -692,76 +710,100 @@ footer .container {
     padding: 20px; /* Padding around the content */
 }
 
-footer ul {
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
-}
-
-/* Footer Section Styles */
-footer {
-    background-color: #343a40; /* Dark background color */
-    color: #ffffff; /* White text color */
-}
-
-footer .container {
-    max-width: 1200px; /* Max width to align with the main content */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Padding around the content */
-}
-
+/* List styles */
 footer ul {
     list-style: none; /* Remove default list styling */
     padding: 0; /* Remove default padding */
     display: flex; /* Use flexbox for horizontal layout */
     justify-content: center; /* Center the links horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 footer ul li {
-    display: inline; /* Display items inline */
     margin: 0 15px; /* Space between links */
 }
 
+/* Social Links */
 footer .social-links {
     margin: 20px 0; /* Margin for social links */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center social icons */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 footer .social-links a {
     display: inline-flex; /* Flexbox for proper alignment */
     align-items: center; /* Center items vertically */
-    margin: 0 15px; /* Space between social icons */
-    font-size: 1.2rem; /* Font size for social icons */
+    margin: 0 10px; /* Space between social icons */
+    font-size: 1.5rem; /* Font size for social icons */
     transition: transform 0.3s; /* Smooth transformation */
+    color: white; /* Ensure the icons are white */
 }
 
 footer .social-links a:hover {
     transform: scale(1.1); /* Scale up on hover */
 }
 
+/* Footer text */
 footer p {
     margin: 15px 0 0; /* Top margin for spacing */
     font-size: 0.9rem; /* Smaller font size for copyright */
+    text-align: center; /* Center align text */
 }
 
-
-footer .social-links {
-    margin: 20px 0; /* Margin for social links */
+/* Contact Section Styles */
+.mb-3 {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    align-items: center; /* Center vertically */
+    gap: 20px; /* Add space between items */
+    padding: 10px; /* Add padding around the section */
+    background-color: #333; /* Background color for the section */
+    border-radius: 8px; /* Rounded corners */
+    justify-content: center; /* Center items horizontally */
 }
 
-footer .social-links a {
-    display: inline-flex; /* Flexbox for proper alignment */
-    align-items: center; /* Center items vertically */
-    margin: 0 15px; /* Space between social icons */
-    font-size: 1.2rem; /* Font size for social icons */
-    transition: transform 0.3s; /* Smooth transformation */
+.mb-3 a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px; /* Font size */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
 }
 
-footer .social-links a:hover {
-    transform: scale(1.1); /* Scale up on hover */
+.mb-3 a:hover {
+    color: #ffdd57; /* Change color on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
 }
 
-footer p {
-    margin: 15px 0 0; /* Top margin for spacing */
-    font-size: 0.9rem; /* Smaller font size for copyright */
+.mb-3 i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .mb-3 {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Align items to center */
+    }
+
+    .mb-3 a {
+        margin-bottom: 10px; /* Add space between stacked items */
+    }
+
+    footer ul {
+        flex-direction: row; /* Display links horizontally on small screens */
+        align-items: center; /* Center align items */
+        justify-content: center; /* Center the items */
+    }
+
+    footer ul li {
+        margin: 5px; /* Add space between items */
+    }
+
+    footer .social-links a {
+        margin: 5px; /* Space between social icons */
+        font-size: 1.2rem; /* Reduce font size for smaller screens */
+    }
 }
 
 /* Responsive Design */
@@ -785,55 +827,55 @@ footer p {
 
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
-.col-md-4 {
-    padding: 0.5rem; /* Add padding between cards */
-    margin-bottom: 10px;
-}
+    .col-md-4 {
+        padding: 0.2rem; /* Add padding between cards */
+        margin-bottom: 10px;
+    }
 
-.card {
-    max-width: 100%; /* Let the card fill available width */
-    min-height: 250px; /* Adjust to better fit the content */
-    padding: 0.2rem; /* Provide padding inside the card */
-    margin: 0 auto; /* Center the card in the grid */
-    border: none; /* Ensure no visible borders */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for better visibility */
-    border-radius: 10px; /* Round the corners for a modern look */
-    transition: transform 0.3s ease-in-out;
-}
+    .card {
+        max-width: 100%; /* Let the card fill available width */
+        min-height: 250px; /* Adjust to better fit the content */
+        padding: 0.2rem; /* Provide padding inside the card */
+        margin: 0 auto; /* Center the card in the grid */
+        border: none; /* Ensure no visible borders */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for better visibility */
+        border-radius: 10px; /* Round the corners for a modern look */
+        transition: transform 0.3s ease-in-out;
+    }
 
-.card-img-top {
-    object-fit: cover; /* Ensure image covers the card properly */
-    width: 100%; /* Full width inside the card */
-    height: 200px; /* Let the height adjust automatically */
-    max-height: 200px; /* Limit max height of the image to prevent oversized images */
-    border-radius: 10px 10px 0 0; /* Round the image corners to match the card */
-}
+    .card-img-top {
+        object-fit: contain; /* Ensure image fits within the card */
+        width: 100%; /* Full width inside the card */
+        max-height: 200px; /* Limit max height of the image to prevent oversized images */
+        border-radius: 10px 10px 0 0; /* Round the image corners to match the card */
+    }
 
-.card-body {
-    padding: 0.2rem; /* Add some spacing around text */
-    text-align: center; /* Center the text for a balanced look */
-}
+    .card-body {
+        padding: 0.2rem; /* Add some spacing around text */
+        text-align: center; /* Center the text for a balanced look */
+    }
 
-.card-title {
-    font-size: 1rem; /* Slightly reduce font size for smaller screens */
-    font-weight: 600; /* Keep the title bold and visible */
-}
+    .card-title {
+        font-size: 1rem; /* Slightly reduce font size for smaller screens */
+        font-weight: 600; /* Keep the title bold and visible */
+    }
 
-.card-text {
-    font-size: 0.85rem; /* Smaller font size for the description */
-    line-height: 1.3; /* Provide enough space between lines */
-    color: #666; /* Lighter text color for description */
-}
+    .card-text {
+        font-size: 0.85rem; /* Smaller font size for the description */
+        line-height: 1.3; /* Provide enough space between lines */
+        color: #666; /* Lighter text color for description */
+    }
 
-/* Optional: Add hover effect */
-.card:hover {
-    transform: scale(1.05); /* Slightly increase size on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    /* Optional: Add hover effect */
+    .card:hover {
+        transform: scale(1.05); /* Slightly increase size on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    }
 }
 
 .btn.btn-warning {
     font-size: 0.8rem; /* Reduce font size */
     padding: 0.4rem 0.6rem; /* Adjust padding for a smaller button */
 }
-}
+
 
