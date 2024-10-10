@@ -512,11 +512,23 @@ header {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.testimonial-img {
+    width: 250px;   /* Fixed container width */
+    height: 250px;  /* Fixed container height */
+    border-radius: 50%;  /* Circular container */
+    overflow: hidden;  /* Clips image overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;  /* Centers the container horizontally */
+    background-color: #f1f1f1;  /* Optional: a background color for better visibility */
+}
+
 .testimonial-img img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
+    width: 100%;  /* Image will fill the container width */
+    height: 100%;  /* Image will fill the container height */
+    object-fit: contain;  /* Ensures the whole image is visible inside the container */
+    border-radius: 50%;  /* Ensures the image is circular */
 }
 
 .testimonial-quote {
@@ -627,7 +639,7 @@ header {
 
         .landmark-image {
             width: 100%; /* Ensures it takes up the full container width */
-            height: 450px; /* Sets a fixed height for larger screens */
+            height: 390px; /* Sets a fixed height for larger screens */
             object-fit: cover; /* Ensures the image covers the height and width while cropping excess */
             border-radius: 8px; /* Rounded corners for styling */
         }
