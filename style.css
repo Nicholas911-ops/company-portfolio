@@ -527,7 +527,7 @@ header {
 .testimonial-img img {
     width: 100%;  /* Image will fill the container width */
     height: 100%;  /* Image will fill the container height */
-    object-fit: contain;  /* Ensures the whole image is visible inside the container */
+    object-fit: cover;  /* Ensures the whole image is visible inside the container */
     border-radius: 50%;  /* Ensures the image is circular */
 }
 
