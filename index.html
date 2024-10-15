@@ -79,7 +79,9 @@
                           <ul class="dropdown-menu" aria-labelledby="letsTalkDropdown">
                             <li><a class="dropdown-item phone-link" href="tel:+254113393877">Call Us</a></li>
                             <li><a class="dropdown-item whatsapp-link" href="https://wa.me/+254113393877" target="_blank">WhatsApp</a></li>
-                            <li><a class="dropdown-item email-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=homelightkeltd@gmail.com" target="_blank">Email Us</a></li>
+
+                            <li><a class="dropdown-item email-link" id="gmailLink" target="_blank">Email Us</a></li>                          
+                         
                         </ul>
                         </li>
                       </ul>
@@ -2871,6 +2873,25 @@
 
     <!-- Custom JavaScript file -->
     <script src="main.js" defer></script>
+
+    
+    <script>
+        document.getElementById('gmailLink').addEventListener('click', function(e) {
+            var recipient = 'homelightkeltd@gmail.com';
+            var subject = 'Subject%20Here'; // URL-encoded subject
+            var body = 'Type%20your%20message%20here'; // URL-encoded body
+            
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // Mobile URL with subject and body fields filled
+                this.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + recipient + '&su=' + subject + '&body=' + body;
+            } else {
+                // Desktop URL with subject and body fields filled
+                this.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + recipient + '&su=' + subject + '&body=' + body;
+            }
+        });
+    </script>    
 
 </body>
 </html>
